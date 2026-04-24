@@ -5,6 +5,7 @@ import { Index } from '../components/index';
 import { Home } from '../components/Home';
 import { Contact } from '../components/contact';
 import { Projects } from '../components/projects';
+import { AboutMe } from '../components/aboutme';
 
 function AppRoutes() {
 	return (
@@ -32,8 +33,7 @@ function AppRoutes() {
 				<Route element={<PublicRoute />}>
 					<Route path="contact-me" element={<Contact />} />
 					<Route path="projects" element={<Projects />} />
-					{/* <Route path="what-we-do" element={<WhatWeDo />} />
-					<Route path="contact-us" element={<ContactUs />} /> */}
+					<Route path="about-me" element={<AboutMe />} />
 					{/* <Route path="*" element={<PageNotFound />} /> */}
 				</Route>
 			</Route>
