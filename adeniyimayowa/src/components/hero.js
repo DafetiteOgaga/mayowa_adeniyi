@@ -9,11 +9,22 @@ function LandingPage() {
 				</div>
 				<div style={{margin: "auto"}}
 				className="mayor-hero-text-container-inner">
-					<h2 className="mayor-hero-title">Data Analyst</h2>
+					<h3 className="mayor-hero-name">Mayowa Adeniyi</h3>
+					<h2 className="mayor-hero-title mb-0">Business Intelligence Analyst</h2>
 					<p className="mayor-hero-subtitle">
-					There are several notable individuals
-					<br/>He is currently the Commissioner
-					<br/>A highly motivated Physiologist with passion in Environmental & Stress Physiology. I have skills in Basic Physiology, Chronobiology, Molecular Biology, Stress Physiology and Exercise Physiology & Fitness Training. In the aspect of Preventive Medicine, my previous study covers exogenous agents including garcinia kola (bitter kola), high fat diet, oral contraceptive and micronutrients most especially selenium. I have also worked with other scientists in GIT & metabolism and Biotechnology.
+						I am a Business Intelligence Analyst with a strong ability
+						to transform complex data into actionable insights that support strategic
+						decision-making. Experienced in leveraging data visualization tools,
+						reporting systems, and analytical methodologies to identify trends,
+						optimize performance, and drive business growth. Proficient in tools
+						and technologies such as [BI Tools—e.g., Power BI, Tableau],
+						[Programming Languages—e.g., SQL, Python], and [Database Systems—e.g.,
+						MySQL, PostgreSQL], with a solid understanding of data modeling, ETL
+						processes, and dashboard development. i demonstrate a keen eye for
+						detail, strong problem-solving skills, and the ability to communicate
+						findings clearly to both technical and non-technical stakeholders.
+						Passionate about using data to tell compelling stories and support
+						continuous business improvement within organization.
 					</p>
 				</div>
 			</div>
