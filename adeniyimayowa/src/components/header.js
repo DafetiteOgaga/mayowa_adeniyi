@@ -11,6 +11,10 @@ const headerMenuArr = [
 		link: "projects",
 	},
 	{
+		name: "About Me",
+		link: "about-me",
+	},
+	{
 		name: "Contact Me",
 		link: "contact-me",
 	}
