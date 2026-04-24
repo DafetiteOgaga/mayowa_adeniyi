@@ -15,7 +15,7 @@ import { faEye, faEyeSlash, faCircleCheck, faCheck, faTimes,
   faCirclePlus, faBullseye, faLightbulb, faSchool,
   faHandsHelping, faPuzzlePiece, faPencil, faGraduationCap,
   faEnvelope, faPhone, faLocationDot, faComment,
-  faCommentAlt, faPhoneSquare,
+  faCommentAlt, faPhoneSquare, faChartBar,
 } from "@fortawesome/free-solid-svg-icons";
 library.add(
   faEye, faEyeSlash, faCircleCheck, faCheck,
@@ -26,7 +26,7 @@ library.add(
   faMinus, faCirclePlus, faBullseye, faLightbulb, faSchool,
   faHandsHelping, faPuzzlePiece, faPencil, faGraduationCap,
   faEnvelope, faPhone, faLocationDot, faComment,
-  faCommentAlt, faPhoneSquare,
+  faCommentAlt, faPhoneSquare, faChartBar,
 );
 
 function App() {
