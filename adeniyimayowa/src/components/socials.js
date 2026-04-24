@@ -28,7 +28,7 @@ function Socials() {
 		<div className="d-flex">
 			{commArr.map((contact, cIdx) => {
 				return (
-					<div className="contact-item">
+					<div key={cIdx} className="contact-item">
 						<Link
 						rel="nofollow"
 						// to=""
