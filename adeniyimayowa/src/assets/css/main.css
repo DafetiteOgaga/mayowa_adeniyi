@@ -4,6 +4,7 @@
   --white: #fff;
   /* --fontColor: #707070; */
   --fontColor: #b9b5b5;
+  --greyColor: #3b3b3b;
   --background: #222;
 }
 
@@ -35,6 +36,9 @@ a:focus {
 a:focus {
   outline: none;
 }
+button {
+  outline: none !important;
+}
 
 .btn {
   padding: 8px 32px;
@@ -57,7 +61,7 @@ a:focus {
 } */
 
 section.about {
-  /* height: 100vh; */
+  height: 100vh;
   min-height: 375px;
 }
 .mayor-intro-text {
@@ -68,6 +72,35 @@ section.about {
 section.projects {
   /* height: 100vh; */
   min-height: 375px;
+}
+section.projects.loading {
+  display: flex;
+  height: 100vh;
+}
+.arrow {
+  position: absolute;
+  top: 42%;
+  margin: auto -10px;
+  padding: 20px 0;
+  border-radius: 10px;
+  background-color: transparent;
+  border: transparent;
+  color: var(--fontColor);
+}
+.arrow:hover, .arrow:active {
+  color: var(--lightBlue);
+  border: transparent;
+}
+.arrow:disabled {
+  background-color: transparent;
+  border: transparent;
+  color: var(--greyColor);
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
 }
 .mayor-section-pad-top {
   padding-top: 80px;
@@ -186,6 +219,7 @@ section.home {
   height: 100vh;
   min-height: 375px;
   position: relative;
+  background-position: left;
 }
 
 @media (min-height: 600px) and (min-width: 1920px) {
@@ -202,7 +236,7 @@ section.home {
 
 @media (min-height: 680px) and (max-height: 829px) {
   section.home {
-    background-position: center -300px;
+    /* background-position: center -300px; */
   }
 }
 
@@ -296,8 +330,8 @@ section.home {
   font-size: 0.9rem;
 }
 
-.mayor-projects-container {
-  padding-top: 20px;
+.mayor-projects {
+  margin-left: 3.5%;
 }
 
 .mayor-projects-item {
@@ -449,7 +483,7 @@ section.contact {
   color: var(--white);
   background-color: var(--background);
   background-image: url(../img/background2.jpg);
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
   min-height: 800px;
   position: relative;
@@ -560,6 +594,12 @@ p {
 
   .mayor-container-projects {
     max-width: 1290px;
+  }
+
+  .mayor-container-projects.loading {
+    display: flex;
+    justify-content: center;
+    align-self: center;
   }
 
   .mayor-container-contact {
