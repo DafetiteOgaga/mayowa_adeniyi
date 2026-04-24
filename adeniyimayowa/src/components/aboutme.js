@@ -40,7 +40,7 @@ function AboutMe() {
                 <div className="d-grid grid-column-1-1">
                     {/* experienes */}
                     <div className="">
-                    <h3 className="mayor-text-primary underline mb-0">Experiences</h3>
+                    {/* <h3 className="mayor-text-primary underline mb-0">Experiences</h3> */}
                         {experiances.map((experience, eIdx) => {
                             return (
                                 <div key={eIdx} className="">
@@ -63,8 +63,8 @@ function AboutMe() {
                             return (
                                 <div key={eIdx} className="">
                                     <div className="mayor-intro-text-container">
-                                        <h3 className="mayor-text-primary mb-0">{edu.course}</h3>
-                                        <h5 className="mayor-text-primary mb-0">{edu.degree}</h5>
+                                        <h5 className="mayor-text-primary mb-0">{edu.course}</h5>
+                                        <h6 className="mayor-text-primary mb-0">{edu.degree}</h6>
                                         <p className="mb-4 mayor-intro-text">
                                             {edu.school}
                                         </p>
