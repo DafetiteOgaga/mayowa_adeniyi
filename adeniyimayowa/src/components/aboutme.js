@@ -24,6 +24,18 @@ const education = [
         school: "Lagos State Model College Badore."
     },
 ]
+const certifications = [
+    {
+        title: "Data Analytics Professional",
+        cerification: "Data Science in Analytics (speialization)",
+        institution: "Cousera (Google)"
+    },
+    {
+        title: "Data Science Professional Certification",
+        cerification: "Analytics for Scientists",
+        institution: "Cousera (Meta)"
+    },
+]
 function AboutMe() {
 	return (
 		<section className="about mayor-section-pad-top">
@@ -56,22 +68,42 @@ function AboutMe() {
                         })}
                     </div>
 
-                    {/* education */}
-                    <div className="">
-                    <h3 className="mayor-text-primary underline mb-0">Education</h3>
-                        {education.map((edu, eIdx) => {
-                            return (
-                                <div key={eIdx} className="">
-                                    <div className="mayor-intro-text-container">
-                                        <h5 className="mayor-text-primary mb-0">{edu.course}</h5>
-                                        <h6 className="mayor-text-primary mb-0">{edu.degree}</h6>
-                                        <p className="mb-4 mayor-intro-text">
-                                            {edu.school}
-                                        </p>
+                    <div>
+                        {/* certifications */}
+                        <div className="">
+                        <h3 className="mayor-text-primary underline mb-0">Certifications</h3>
+                            {certifications.map((cert, cIdx) => {
+                                return (
+                                    <div key={cIdx} className="">
+                                        <div className="mayor-intro-text-container">
+                                            <h5 className="mayor-text-primary mb-0">{cert.title}</h5>
+                                            <h6 className="mayor-text-primary mb-0">{cert.cerification}</h6>
+                                            <p className="mb-4 mayor-intro-text">
+                                                {cert.institution}
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                            )
-                        })}
+                                )
+                            })}
+                        </div>
+
+                        {/* education */}
+                        <div className="">
+                        <h3 className="mayor-text-primary underline mb-0">Education</h3>
+                            {education.map((edu, eIdx) => {
+                                return (
+                                    <div key={eIdx} className="">
+                                        <div className="mayor-intro-text-container">
+                                            <h5 className="mayor-text-primary mb-0">{edu.course}</h5>
+                                            <h6 className="mayor-text-primary mb-0">{edu.degree}</h6>
+                                            <p className="mb-4 mayor-intro-text">
+                                                {edu.school}
+                                            </p>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
                     </div>
                 </div>
             </div>
