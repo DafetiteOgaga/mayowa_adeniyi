@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef, useLayoutEffect } from 'react';
 import { AppRoutes } from './routes/routes';
 import { useLocation } from 'react-router-dom';
 import './assets/css/bootstrap.min.css'
@@ -36,17 +36,11 @@ library.add(
 );
 
 function App() {
+  const pageLoadingRef = useRef()
   const { setPageLoading, SpinnerComponent, pageLoading } = useSpinner()
   const { label, width, isMobile } = useDevice()
   console.log({ label, width, isMobile })
   const location = useLocation().pathname;
-  // useEffect(() => {
-	// 	const timer = setTimeout(() => {
-	// 		setPageLoading(false);
-	// 	}, 500); // small delay so spinner is visible
-	
-	// 	return () => clearTimeout(timer);
-	// }, []);
 
   // useEffect(() => {
   //   const raf = requestAnimationFrame(() => {
@@ -84,7 +78,8 @@ function App() {
   //     }
   //   };
   // }, [location]);
-  useEffect(() => {
+
+  useLayoutEffect(() => {
     setPageLoading(true);
   
     const timer = setTimeout(() => {
@@ -93,7 +88,17 @@ function App() {
   
     return () => clearTimeout(timer);
   }, [location]);
-  console.log({pageLoading})
+
+  // useEffect(() => {
+  //   setPageLoading(true);
+  
+  //   const timer = setTimeout(() => {
+  //     setPageLoading(false);
+  //   }, 400);
+  
+  //   return () => clearTimeout(timer);
+  // }, [location]);
+  console.log('✨'.repeat(10), {pageLoading})
   return (
       <>
           <section className={`spinner-loading ${pageLoading?'':'d-none'}`}>
