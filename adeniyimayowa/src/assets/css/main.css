@@ -808,11 +808,11 @@ button {
     padding: 5px;
   }
   .projects .project-cards {
-    min-height: 60vh;
+    min-height: 68vh;
   }
   .arrow {
     margin: auto 5px;
-    transform: translateY(-315%);
+    transform: translateY(-350%);
     background-color: var(--transparentLightBlue)
   };
   .about-me-content .cert,
