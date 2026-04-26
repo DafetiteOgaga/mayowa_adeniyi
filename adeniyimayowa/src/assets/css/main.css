@@ -1,11 +1,15 @@
 
 :root {
   --lightBlue: #38B;
+  --transparentLightBlue: #3387bb77;
   --white: #fff;
+  --lightWhite: #ffffff3f;
   /* --fontColor: #707070; */
   --fontColor: #b9b5b5;
   --greyColor: #3b3b3b;
   --background: #222;
+  --dparagraph: 20px;
+  --mparagraph: 18px;
 }
 
 @font-face {
@@ -26,7 +30,6 @@ html, body {
 
 body {
 	font-family: "Raleway", sans-serif;
-	font-size: 1.2em;
   color: var(--fontColor);
   margin: 0;
   padding: 0;
@@ -103,8 +106,11 @@ button {
   color: rgba(107, 104, 104, 0.7) !important;
 }
 
+.header-bar a {
+  padding: 8px 20px !important;
+}
 section.about-me {
-  padding-top: 80px;
+  padding-top: 100px;
 }
 .about-me-content {
     grid-template-columns: 1fr 1fr !important;
@@ -112,7 +118,6 @@ section.about-me {
 }
 
 .mayor-intro-text {
-  font-size: 1.2rem;
   line-height: 1.3 !important;
 }
 
@@ -133,9 +138,13 @@ section.projects {
   justify-content: center;
   align-self: center;
 }
+.project-nav-btns {
+  position: relative;
+}
 .arrow {
   position: absolute;
-  top: 42%;
+  /* top: 42%; */
+  transform: translateY(300%);
   margin: auto -10px;
   padding: 20px 0;
   border-radius: 10px;
@@ -146,6 +155,7 @@ section.projects {
 .arrow:hover, .arrow:active {
   color: var(--lightBlue);
   border: transparent;
+  background-color: var(--lightWhite);
 }
 .arrow:disabled {
   background-color: transparent;
@@ -257,6 +267,7 @@ section.projects {
   padding-left: 10px;
   padding-right: 10px;
   color: var(--white);
+  font-size: 1.5rem;
 }
 
 .navbar-toggler-icon {
@@ -278,15 +289,14 @@ section.home {
   background-image: url(../img/background1.jpg);
   background-repeat: no-repeat;
   background-position: left;
-  font-size: 1.25rem;
   color: var(--white);
 }
 
-@media (min-height: 600px) and (min-width: 1920px) {
+/* @media (min-height: 600px) and (min-width: 1920px) {
   section.home {
     background-size: cover;
   }
-}
+} */
 
 @media (min-height: 830px) {
   section.home {
@@ -310,6 +320,7 @@ section.home {
 }
 
 .mayor-hero-text-container {
+  padding-top: 70px;
   width: auto;
   height: 100%;
   /* display: flex; */
@@ -329,8 +340,8 @@ section.home {
 } */
 
 .mayor-hero-img-container {
-  width: 70%;
-  height: 70%;
+  /* width: 70%; */
+  height: 100%;
   justify-self: end;
 }
 
@@ -343,7 +354,7 @@ section.home {
 }
 
 .mayor-hero-title {
-  font-size: 2rem;
+  font-size: 1.7rem;
   text-shadow: 2px 2px 2px var(--background);
 }
 .mayor-hero-name {
@@ -351,10 +362,13 @@ section.home {
   text-shadow: 2px 2px 2px var(--background);
   font-weight: bold;
   text-transform: uppercase;
+  margin-bottom: 0 !important;
+  line-height: 1;
 }
 
 .mayor-hero-subtitle {
   text-shadow: 2px 2px 2px var(--background);
+  margin: 1rem 0;
 }
 
 .mayor-intro-next {
@@ -384,11 +398,21 @@ section.home {
 .mayor-section-desc {
   max-width: 650px;
   width: 100%;
-  font-size: 0.9rem;
 }
 
 .mayor-projects {
-  margin-left: 3.5%;
+  margin-left: 9%;
+}
+.projects .project-cards {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.about-me .certification-h3,
+.about-me .education-h3 {
+  color: var(--lightBlue);
+  text-decoration: underline;
+  margin-bottom: 0;
 }
 
 .mayor-projects-item {
@@ -634,9 +658,13 @@ section.contact-me {
 
 p {
   line-height: 1.7;
+  font-size: var(--dparagraph) !important;
+}
+button {
+  font-size: var(--dparagraph) !important;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .mayor-intro-text-container {
     padding-left: 0px;
   }
@@ -645,9 +673,9 @@ p {
     padding-right: 30px;
     padding-left: 30px;
   }
-}
+} */
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .container {
     max-width: 1275px;
   }
@@ -659,7 +687,7 @@ p {
   .mayor-container-contact {
     max-width: 1063px;
   }
-}
+} */
 
 @media (max-width: 991px) {
   .mayor-intro-text-container {
@@ -676,7 +704,7 @@ p {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
   nav {
     padding-top: 25px !important;
@@ -697,9 +725,10 @@ p {
   }
   .navbar-hide .nav-link {
     /* color: var(--fontColor); */
-    font-size: medium;
+    font-size: 17px;
+    white-space: pre;
     /* padding-right: 12px; */
-    padding: 8px 12px;
+    padding: 15px 12px;
   }
   /* ............. */
   .navbar-hide.d-show {
@@ -714,6 +743,10 @@ p {
     flex-direction: column;
     margin: auto;
     gap: 3px;
+    padding-top: 0;
+  }
+  .mayor-hero-img-container {
+    width: 90%;
   }
   section.home {
     padding-top: 65px;
@@ -731,7 +764,6 @@ p {
   }
   .mayor-hero-subtitle {
     text-align: center;
-    font-size: medium;
   }
   .mx-hero {
     margin: auto 15px !important;
@@ -748,13 +780,12 @@ p {
     display: block !important;
   }
   .mayor-intro-text {
-    font-size: 0.95rem;
     margin-bottom: 1rem !important;
 }
   .mayor-intro-text-container {
     padding: 15px 10px 5px 10px;
   }
-  .mayor-intro-text-container.experience {
+  .mayor-intro-text-container.rm-pt {
     padding: 0px 10px;
   }
   .mayor-intro-text-container.experience h3 {
@@ -764,7 +795,6 @@ p {
     font-size: large;
   }
   .projects p {
-    font-size: 0.95rem;
   }
   .mayor-projects {
     display: grid;
@@ -774,16 +804,14 @@ p {
   .mayor-projects a {
     padding: 5px;
   }
-  .project-nav-btns button {
-    font-size: large;
-    margin: auto 5px;
-  };
-  .about-me-content .certification,
-  .about-me-content .education {
-    font-size: larger;
-    padding-top: 10px;
-    margin: 0 10px;
+  .projects .project-cards {
+    min-height: 68vh;
   }
+  .arrow {
+    margin: auto 5px;
+    transform: translateY(-315%);
+    background-color: var(--transparentLightBlue)
+  };
   .about-me-content .cert,
   .about-me-content .edu {
     padding: 5px 10px;
@@ -801,7 +829,6 @@ p {
     margin-bottom: 0.1rem !important;
   }
   .contact-me p {
-    font-size: 0.95rem;
     margin-bottom: 0.5rem !important;
   }
   .mayor-input {
@@ -809,6 +836,12 @@ p {
     width: 100%;
     padding: 8px;
     font-size: 0.95rem !important;
+  }
+  .about-me .certification-h3,
+  .about-me .education-h3 {
+    font-size: 19px;
+    padding-top: 10px;
+    margin: 0 10px;
   }
 }
 
@@ -829,5 +862,11 @@ p {
 
   .mayor-projects-item {
     margin: 0;
+  }
+  p {
+    font-size: var(--mparagraph) !important;
+  }
+  button {
+    font-size: var(--mparagraph) !important;
   }
 }
