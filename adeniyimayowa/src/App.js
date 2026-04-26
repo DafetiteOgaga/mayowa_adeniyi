@@ -1,12 +1,14 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { AppRoutes } from './routes/routes';
 import { useLocation } from 'react-router-dom';
 import './assets/css/bootstrap.min.css'
 import './App.css';
 import './assets/css/main.css'
+import { useSpinner } from './context/spinner/spinner';
 // import './assets/css/responsive.css'
 // import './assets/css/all.min.css'
 // import './assets/css/animations.css'
+import { useDevice } from './context/deviceTypeContext';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faEye, faEyeSlash, faCircleCheck, faCheck, faTimes,
   faBars, faCopy, faArrowsRotate, faDownload, faGear, faCogs,
@@ -34,47 +36,73 @@ library.add(
 );
 
 function App() {
+  const { setPageLoading, SpinnerComponent, pageLoading } = useSpinner()
+  const { label, width, isMobile } = useDevice()
+  console.log({ label, width, isMobile })
   const location = useLocation().pathname;
+  // useEffect(() => {
+	// 	const timer = setTimeout(() => {
+	// 		setPageLoading(false);
+	// 	}, 500); // small delay so spinner is visible
+	
+	// 	return () => clearTimeout(timer);
+	// }, []);
+
+  // useEffect(() => {
+  //   const raf = requestAnimationFrame(() => {
+  //     const animatedElements = document.querySelectorAll(".animate");
+  
+  //     const observer = new IntersectionObserver(
+  //       (entries) => {
+  //         entries.forEach((entry) => {
+  //           if (entry.isIntersecting) {
+  //             entry.target.classList.add("in-view");
+  //             // observer.unobserve(entry.target);
+  //           } else {
+  //             entry.target.classList.remove("in-view");
+  //           }
+  //         });
+  //       },
+  //       {
+  //         threshold: 0.15,
+  //         rootMargin: "0px 0px -50px 0px",
+  //       }
+  //     );
+  
+  //     animatedElements.forEach((el) => observer.observe(el));
+  
+  //     // store observer on window temporarily so cleanup can access it
+  //     window.__pageObserver = observer;
+  //   });
+  
+  //   return () => {
+  //     cancelAnimationFrame(raf);
+  
+  //     if (window.__pageObserver) {
+  //       window.__pageObserver.disconnect();
+  //       window.__pageObserver = null;
+  //     }
+  //   };
+  // }, [location]);
   useEffect(() => {
-    const raf = requestAnimationFrame(() => {
-      const animatedElements = document.querySelectorAll(".animate");
+    setPageLoading(true);
   
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("in-view");
-              // observer.unobserve(entry.target);
-            } else {
-              entry.target.classList.remove("in-view");
-            }
-          });
-        },
-        {
-          threshold: 0.15,
-          rootMargin: "0px 0px -50px 0px",
-        }
-      );
+    const timer = setTimeout(() => {
+      setPageLoading(false);
+    }, 400);
   
-      animatedElements.forEach((el) => observer.observe(el));
-  
-      // store observer on window temporarily so cleanup can access it
-      window.__pageObserver = observer;
-    });
-  
-    return () => {
-      cancelAnimationFrame(raf);
-  
-      if (window.__pageObserver) {
-        window.__pageObserver.disconnect();
-        window.__pageObserver = null;
-      }
-    };
+    return () => clearTimeout(timer);
   }, [location]);
+  console.log({pageLoading})
   return (
-    <>
-        <AppRoutes />
-    </>
+      <>
+          <section className={`spinner-loading ${pageLoading?'':'d-none'}`}>
+            <SpinnerComponent />
+          </section>
+          <div className={pageLoading ? 'd-none' : ''}>
+            <AppRoutes />
+          </div>
+      </>
   );
 }
 
