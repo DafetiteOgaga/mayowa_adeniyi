@@ -1,6 +1,8 @@
+import { createContext, useContext, useState, useEffect } from "react";
 import './spinner.css'
 
 function Spinner ({type}) {
+	console.log("just Spinner")
 	return (
 		<>
 			{type === 'dot' ?
@@ -29,6 +31,7 @@ function Spinner ({type}) {
 	)
 }
 function SpinnerBarForPage () {
+	console.log("SpinnerBarForPage")
 	return (
 		<div className='page-container'>
 			{/* <div className='bar-container glass glass-lighter'> */}
@@ -38,4 +41,42 @@ function SpinnerBarForPage () {
 		</div>
 	)
 }
-export { Spinner, SpinnerBarForPage }
+// export { Spinner, SpinnerBarForPage }
+
+const SpinnerContext = createContext();
+
+export function SpinnerProvider({ children }) {
+	const [pageLoading, setPageLoading] = useState(true);
+	console.log("in spinner context")
+	console.log({pageLoading})
+
+	// keep your original SpinnerComponent logic here
+	function SpinnerComponent() {
+		// console.log("✅✅✅✅✅spinner for full page")
+
+		if (pageLoading) {
+			console.log({pageLoading})
+			return <Spinner type="dot" />;
+		}
+
+		return null;
+	}
+
+	return (
+		<SpinnerContext.Provider
+		value={{
+			pageLoading,
+			setPageLoading,
+			Spinner,
+			SpinnerBarForPage,
+			SpinnerComponent
+		}}
+		>
+			{children}
+		</SpinnerContext.Provider>
+	);
+}
+
+export function useSpinner() {
+	return useContext(SpinnerContext);
+}

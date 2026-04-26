@@ -6,8 +6,9 @@ import gal3 from '../assets/img/gallery-tn-03.jpg'
 import gal4 from '../assets/img/gallery-tn-04.jpg'
 import gal5 from '../assets/img/gallery-tn-05.jpg'
 import gal6 from '../assets/img/gallery-tn-06.jpg'
-import { Spinner } from '../hooks/spinner/spinner';
+import { Spinner } from '../context/spinner/spinner';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useDevice } from '../context/deviceTypeContext';
 
 const projectsArr = [
 	{
@@ -102,10 +103,10 @@ const projectsArr = [
 	},
 ];
 
-const ITEMS_PER_PAGE = 10;
-
 function Projects() {
-	const [pageLoading, setPageLoading] = useState(true);
+	const { isMobile } = useDevice()
+	const ITEMS_PER_PAGE = isMobile?4:10;
+	// const [pageLoading, setPageLoading] = useState(true);
 	// const [arrays, setArrays] = useState(projectsArr.slice(0, 10))
 	const [page, setPage] = useState(0);
 	const start = page * ITEMS_PER_PAGE;
@@ -121,24 +122,23 @@ function Projects() {
 			setPage(prev => prev - 1);
 		}
 	};
-	useEffect(() => {
-		const timer = setTimeout(() => {
-			setPageLoading(false);
-		}, 500); // small delay so spinner is visible
+	// useEffect(() => {
+	// 	const timer = setTimeout(() => {
+	// 		setPageLoading(false);
+	// 	}, 500); // small delay so spinner is visible
 	
-		return () => clearTimeout(timer);
-	}, []);
+	// 	return () => clearTimeout(timer);
+	// }, []);
 	console.log("Current page:", page);
 	return (
-		<section className={`projects mayor-section-pad-top ${pageLoading?'loading':''}`}>
-			<div className={`container mayor-container-projects ${pageLoading?'loading':''}`}>
-				{pageLoading?
-				// <>
+		<>
+			<div className={`container px-1 mayor-container-projects`}>
+				{/* {pageLoading?
 				<>
 					<Spinner type="dot" />
 				</>
 				:
-				<>
+				<> */}
 					<div className="row">
 						<div className="text-center col-12">
 							<h2 className="mayor-text-primary mayor-section-title">My Projects</h2>
@@ -170,7 +170,7 @@ function Projects() {
 									})}
 								</div>
 							</div>
-							<div className="">
+							<div className="project-nav-btns">
 									<button
 									className='arrow left'
 									onClick={prevPage}
@@ -188,11 +188,10 @@ function Projects() {
 								</div>
 						</div>
 					</div>
-				</>
-				// </>
-				}
+				{/* </>
+				} */}
 			</div>
-			</section>
+		</>
 	)
 }
 export { Projects }

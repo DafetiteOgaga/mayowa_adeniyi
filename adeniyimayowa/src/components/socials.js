@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from 'react-router-dom';
+import { useDevice } from "../context/deviceTypeContext";
 
 const commArr = [
 	{
@@ -23,17 +24,26 @@ const commArr = [
 		// link: ""
 	}
 ]
-function Socials() {
+function Socials({setIsMenuOpen, isMenuOpen}) {
+	const { label, width, isMobile } = useDevice()
 	return (
-		<div className="d-flex">
+		<div className={`d-flex ${(isMobile&&isMenuOpen)?'':''}`}
+		onClick={()=>{
+			if (isMobile&&isMenuOpen) {
+				setIsMenuOpen(false)
+			}
+		}}>
 			{commArr.map((contact, cIdx) => {
 				return (
-					<div key={cIdx} className="contact-item">
+					<div key={cIdx} className={`contact-item ${!cIdx?'ml-0':''}`}>
 						<Link
 						rel="nofollow"
 						// to=""
-						className="item-link">
-							<FontAwesomeIcon icon={contact.icon} size="lg" />
+						className={`item-link ${(isMobile&&isMenuOpen)?'overlay-icon-color':''}`}>
+							<FontAwesomeIcon
+							icon={contact.icon}
+							size={isMobile?"md":"lg"}
+							/>
 							{/* <span>&nbsp;</span> */}
 							{/* <span className="mb-0">{contact.name}</span> */}
 						</Link>

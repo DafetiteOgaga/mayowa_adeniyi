@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import { BrowserRouter, HashRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import { DeviceProvider } from './context/deviceTypeContext';
+import { SpinnerProvider } from './context/spinner/spinner';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -12,7 +14,11 @@ const RouterToUse = isGitHubPages ? HashRouter : BrowserRouter;
 root.render(
   // <React.StrictMode>
   <RouterToUse>
-    <App />
+    <SpinnerProvider>
+      <DeviceProvider>
+        <App />
+      </DeviceProvider>
+    </SpinnerProvider>
   </RouterToUse>
   // </React.StrictMode>
 );

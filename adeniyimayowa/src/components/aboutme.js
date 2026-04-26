@@ -27,7 +27,7 @@ const education = [
 const certifications = [
     {
         title: "Data Analytics Professional",
-        cerification: "Data Science in Analytics (speialization)",
+        cerification: "Data Science in Analytics (specialization)",
         institution: "Cousera (Google)"
     },
     {
@@ -38,7 +38,7 @@ const certifications = [
 ]
 function AboutMe() {
 	return (
-		<section className="about mayor-section-pad-top">
+		<>
             <div className="container">
 
                 <div className="row">
@@ -49,16 +49,16 @@ function AboutMe() {
                     </div>
                 </div>
 
-                <div className="d-grid grid-column-1-1">
+                <div className="about-me-content">
                     {/* experienes */}
                     <div className="">
                     {/* <h3 className="mayor-text-primary underline mb-0">Experiences</h3> */}
                         {experiances.map((experience, eIdx) => {
                             return (
                                 <div key={eIdx} className="">
-                                    <div className="mayor-intro-text-container">
+                                    <div className="mayor-intro-text-container experience">
                                         <h3 className="mayor-text-primary mb-0">{experience.title}</h3>
-                                        <h5 className="mayor-text-primary mb-0">{experience.company}</h5>
+                                        <h5 className="mayor-text-primary mb-0 italic">{experience.company}</h5>
                                         <p className="mb-4 mayor-intro-text">
                                             {experience.duties}
                                         </p>
@@ -71,13 +71,13 @@ function AboutMe() {
                     <div>
                         {/* certifications */}
                         <div className="">
-                        <h3 className="mayor-text-primary underline mb-0">Certifications</h3>
+                        <h3 className="mayor-text-primary underline mb-0 certification">Certifications</h3>
                             {certifications.map((cert, cIdx) => {
                                 return (
                                     <div key={cIdx} className="">
-                                        <div className="mayor-intro-text-container">
+                                        <div className="mayor-intro-text-container cert">
                                             <h5 className="mayor-text-primary mb-0">{cert.title}</h5>
-                                            <h6 className="mayor-text-primary mb-0">{cert.cerification}</h6>
+                                            <h6 className="mayor-text-primary mb-0 italic">{cert.cerification}</h6>
                                             <p className="mb-4 mayor-intro-text">
                                                 {cert.institution}
                                             </p>
@@ -89,14 +89,14 @@ function AboutMe() {
 
                         {/* education */}
                         <div className="">
-                        <h3 className="mayor-text-primary underline mb-0">Education</h3>
+                        <h3 className="mayor-text-primary underline mb-0 education">Education</h3>
                             {education.map((edu, eIdx) => {
                                 return (
                                     <div key={eIdx} className="">
-                                        <div className="mayor-intro-text-container">
+                                        <div className="mayor-intro-text-container edu">
                                             <h5 className="mayor-text-primary mb-0">{edu.course}</h5>
-                                            <h6 className="mayor-text-primary mb-0">{edu.degree}</h6>
-                                            <p className="mb-4 mayor-intro-text">
+                                            <h6 className="mayor-text-primary mb-0 italic">{edu.degree}</h6>
+                                            <p className="mb-4 mayor-intro-text italic">
                                                 {edu.school}
                                             </p>
                                         </div>
@@ -107,7 +107,7 @@ function AboutMe() {
                     </div>
                 </div>
             </div>
-        </section>
+        </>
 	)
 }
 export { AboutMe }
