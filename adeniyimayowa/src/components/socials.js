@@ -42,7 +42,7 @@ function Socials({setIsMenuOpen, isMenuOpen}) {
 						className={`item-link ${(isMobile&&isMenuOpen)?'overlay-icon-color':''}`}>
 							<FontAwesomeIcon
 							icon={contact.icon}
-							size={isMobile?"md":"lg"}
+							size={"lg"}
 							/>
 							{/* <span>&nbsp;</span> */}
 							{/* <span className="mb-0">{contact.name}</span> */}
