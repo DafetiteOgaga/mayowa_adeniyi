@@ -96,7 +96,7 @@ function AboutMe() {
                                         <div className={`mayor-intro-text-container edu ${!eIdx?'rm-pt':''}`}>
                                             <h5 className="mb-0">{edu.course}</h5>
                                             <h6 className="mb-0 italic">{edu.degree}</h6>
-                                            <p className="mb-4 mayor-intro-text italic">
+                                            <p className="mb-4 mayor-intro-text">
                                                 {edu.school}
                                             </p>
                                         </div>
