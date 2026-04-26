@@ -101,11 +101,26 @@ const projectsArr = [
 		i: "Just Above",
 		span: "The City",
 	},
+	{
+		image: gal4,
+		i: "Repeated",
+		span: "Image Spot",
+	},
+	{
+		image: gal5,
+		i: "Offices",
+		span: "Workstation",
+	},
+	{
+		image: gal6,
+		i: "Just Above",
+		span: "The City",
+	},
 ];
 
 function Projects() {
 	const { isMobile } = useDevice()
-	const ITEMS_PER_PAGE = isMobile?4:10;
+	const ITEMS_PER_PAGE = isMobile?4:8;
 	// const [pageLoading, setPageLoading] = useState(true);
 	// const [arrays, setArrays] = useState(projectsArr.slice(0, 10))
 	const [page, setPage] = useState(0);
@@ -129,6 +144,8 @@ function Projects() {
 	
 	// 	return () => clearTimeout(timer);
 	// }, []);
+	const firstPage = page === 0
+	const lastPage = (page + 1) * ITEMS_PER_PAGE >= projectsArr.length
 	console.log("Current page:", page);
 	return (
 		<>
@@ -150,7 +167,7 @@ function Projects() {
 					</div>
 					<div className="row">
 						<div className="col-12">
-							<div className="mx-auto position-relative">
+							<div className="project-cards">
 								<div className="grid mayor-projects">
 									{currentItems.map((project, pIdx) => {
 										return (
@@ -172,16 +189,16 @@ function Projects() {
 							</div>
 							<div className="project-nav-btns">
 									<button
-									className='arrow left'
+									className={`arrow left ${firstPage?'d-none':''}`}
 									onClick={prevPage}
-									disabled={page === 0}>
+									disabled={firstPage}>
 										<FontAwesomeIcon icon="chevron-left" size='3x' />
 									</button>
 
 									<button
-									className='arrow right'
+									className={`arrow right ${lastPage?'d-none':''}`}
 									onClick={nextPage}
-									disabled={(page + 1) * ITEMS_PER_PAGE >= projectsArr.length}
+									disabled={lastPage}
 									>
 										<FontAwesomeIcon icon="chevron-right" size='3x' />
 									</button>
