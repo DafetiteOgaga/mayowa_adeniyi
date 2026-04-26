@@ -2,15 +2,16 @@ import imageimage from '../assets/img/mayor.jpeg'
 
 function LandingPage() {
 	return (
-		<section className="home text-white mayor-font-big mayor-parallax">
+		<>
 			<div className="mayor-hero-text-container">
 				<div className='mayor-hero-img-container'>
 					<img className='mayor-hero-img' src={imageimage} alt='oh' />
 				</div>
-				<div style={{margin: "auto"}}
-				className="mayor-hero-text-container-inner">
+				<div
+				// style={{margin: "auto"}}
+				className="mayor-hero-text-container-inner mx-hero">
 					<h3 className="mayor-hero-name">Mayowa Adeniyi</h3>
-					<h2 className="mayor-hero-title mb-0">Business Intelligence Analyst</h2>
+					<h2 className="mayor-hero-title mb-0 italic">Business Intelligence Analyst</h2>
 					<p className="mayor-hero-subtitle">
 						I am a Business Intelligence Analyst with a strong ability
 						to transform complex data into actionable insights that support strategic
@@ -28,7 +29,7 @@ function LandingPage() {
 					</p>
 				</div>
 			</div>
-		</section>
+		</>
 	)
 }
 export { LandingPage }
