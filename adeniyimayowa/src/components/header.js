@@ -48,7 +48,7 @@ function Header() {
 						onClick={()=>setIsMenuOpen(prev=>!prev)}>
 							<FontAwesomeIcon icon={isMenuOpen?"times":"bars"} size={"md"} />
 						</button>
-						<div className={`${isMobile?'navbar-hide':'d-block'} ${isMenuOpen ? 'd-show' : 'd-none'}`}
+						<div className={`${isMobile?'navbar-hide':'d-block header-bar'} ${isMenuOpen ? 'd-show' : 'd-none'}`}
 						onClick={()=>setIsMenuOpen(false)}>
 							<ul className="navbar-nav justify-self-end"
 							onClick={()=>setIsMenuOpen(false)}>
