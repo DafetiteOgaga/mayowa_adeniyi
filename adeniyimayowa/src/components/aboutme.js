@@ -76,8 +76,8 @@ function AboutMe() {
                                 return (
                                     <div key={cIdx} className="">
                                         <div className={`mayor-intro-text-container cert ${!cIdx?'rm-pt':''}`}>
-                                            <h5 className="mayor-text-primary mb-0">{cert.title}</h5>
-                                            <h6 className="mayor-text-primary mb-0 italic">{cert.cerification}</h6>
+                                            <h5 className="mb-0">{cert.title}</h5>
+                                            <h6 className="mb-0 italic">{cert.cerification}</h6>
                                             <p className="mb-4 mayor-intro-text">
                                                 {cert.institution}
                                             </p>
@@ -94,8 +94,8 @@ function AboutMe() {
                                 return (
                                     <div key={eIdx} className="">
                                         <div className={`mayor-intro-text-container edu ${!eIdx?'rm-pt':''}`}>
-                                            <h5 className="mayor-text-primary mb-0">{edu.course}</h5>
-                                            <h6 className="mayor-text-primary mb-0 italic">{edu.degree}</h6>
+                                            <h5 className="mb-0">{edu.course}</h5>
+                                            <h6 className="mb-0 italic">{edu.degree}</h6>
                                             <p className="mb-4 mayor-intro-text italic">
                                                 {edu.school}
                                             </p>
