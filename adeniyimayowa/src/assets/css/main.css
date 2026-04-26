@@ -821,11 +821,11 @@ button {
   }
   .about-me-content .cert h5,
   .about-me-content .edu h5 {
-    font-size: 18px;
+    font-size: 20px;
   }
   .about-me-content .cert h6,
   .about-me-content .edu h6 {
-    font-size: 16px;
+    font-size: 19px;
   }
   .about-me-content .cert p,
   .about-me-content .edu p {
@@ -842,7 +842,7 @@ button {
   }
   .about-me .certification-h3,
   .about-me .education-h3 {
-    font-size: 20px;
+    font-size: 22px;
     padding-top: 10px;
     margin: 0 10px;
   }
