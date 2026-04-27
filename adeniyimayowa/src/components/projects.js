@@ -6,7 +6,7 @@ import { useDevice } from '../context/deviceTypeContext';
 
 function Projects() {
 	const { isMobile, width } = useDevice()
-	const ITEMS_PER_PAGE = isMobile?4:width<=1024?9:8;
+	const ITEMS_PER_PAGE = isMobile?4:width<1200?6:8;
 	// const [pageLoading, setPageLoading] = useState(true);
 	// const [arrays, setArrays] = useState(projects.slice(0, 10))
 	const [page, setPage] = useState(0);
@@ -36,11 +36,11 @@ function Projects() {
 				<> */}
 					<div className="row">
 						<div className="text-center col-12">
-							<h2 className="mayor-text-primary mayor-section-title">My Projects</h2>
-							<p className="mx-auto mayor-section-desc mb-0">
+							<h2 className="mayor-text-primary mayor-section-title animate slide-from-top">My Projects</h2>
+							<p className="mx-auto mayor-section-desc mb-0 animate slide-from-bottom">
 								Praesent sed pharetra lorem, blandit convallis mi. Aenean ornare elit ac metus lacinia, sed iaculis nibh semper. Pellentesque est urna, lobortis eu arcu a, aliquet tristique urna.
 							</p>
-							<p className='mb-1'>Page: {page + 1}</p>
+							<p className='mb-1 animate slide-from-left'>Page: {page + 1}</p>
 						</div>
 					</div>
 					<div className="row">
@@ -49,10 +49,18 @@ function Projects() {
 								<div className="grid mayor-projects">
 									{currentItems.map((project, pIdx) => {
 										return (
-											<Link key={pIdx}
+											<Link key={`${page}-${pIdx}`}
+											className=''
 											// to=""
+											// style={{
+											// 	animationDelay: `${pIdx * 0.25}s`,
+											// }}
 											>
-												<figure className="effect-honey mayor-projects-item">
+												<figure className={`effect-honey mayor-projects-item swap-animate swap-slide-right`}
+												style={{
+													animationDelay: `${pIdx * 0.25}s`,
+												}}
+												>
 													<img src={project.image}
 														alt="Image-photo 1"
 														className="img-fluid" />
