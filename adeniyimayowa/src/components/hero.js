@@ -21,15 +21,26 @@ function LandingPage() {
 		<>
 			<div className="mayor-hero-text-container">
 				<div className='mayor-hero-img-container'>
-					<img className='mayor-hero-img' src={imageimage} alt='oh' />
+					<img className='mayor-hero-img animate slide-from-top' src={imageimage} alt='oh' />
 				</div>
 				<div
 				// style={{margin: "auto"}}
 				className="mx-hero">
-					<h3 className="mayor-hero-name">Mayowa Adeniyi</h3>
-					<h2 className="mayor-hero-title mb-0 italic">Business Intelligence Analyst</h2>
-					<p className="mayor-hero-subtitle">
-						{professionalSummary.slice(0, slicePoint)+((isDesktop||showRemainingPara)?professionalSummary.slice(slicePoint):'...')}
+					<h3 className="mayor-hero-name animate slide-from-left">Mayowa Adeniyi</h3>
+					<h2 className="mayor-hero-title mb-0 italic animate slide-from-right">Business Intelligence Analyst</h2>
+					<p className="mayor-hero-subtitle animate slide-from-bottom">
+						<span>
+							{professionalSummary.slice(0, slicePoint)}
+						</span>
+						{/* ellipsis part */}
+						<span className={`fade-ellipsis ${showRemainingPara ? "hide" : ""}`}>
+							...
+						</span>
+						{/* expandable part */}
+						<span
+							className={`hero-expandable ${(isDesktop||showRemainingPara) ? "open" : ""}`}>
+							{professionalSummary.slice(slicePoint)}
+						</span>
 					</p>
 					<button
 					onClick={()=>setShowRemainingPara(prev=>!prev)}
