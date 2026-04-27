@@ -1,134 +1,20 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import gal1 from '../assets/img/gallery-tn-01.jpg'
-import gal2 from '../assets/img/gallery-tn-02.jpg'
-import gal3 from '../assets/img/gallery-tn-03.jpg'
-import gal4 from '../assets/img/gallery-tn-04.jpg'
-import gal5 from '../assets/img/gallery-tn-05.jpg'
-import gal6 from '../assets/img/gallery-tn-06.jpg'
-import { Spinner } from '../context/spinner/spinner';
+import { projects } from '../entry/entry';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDevice } from '../context/deviceTypeContext';
-
-const projectsArr = [
-	{
-		image: gal1,
-		i: "Physical Health",
-		span: "Exercise!",
-	},
-	{
-		image: gal2,
-		i: "Rain on Glass",
-		span: "Second Image",
-	},
-	{
-		image: gal3,
-		i: "Mega City",
-		span: "Sea View",
-	},
-	{
-		image: gal4,
-		i: "Dream Girl",
-		span: "Thoughts",
-	},
-	{
-		image: gal5,
-		i: "Offices",
-		span: "Workstation",
-	},
-	{
-		image: gal6,
-		i: "Just Above",
-		span: "The City",
-	},
-	{
-		image: gal1,
-		i: "Another",
-		span: "Exercise Time",
-	},
-	{
-		image: gal2,
-		i: "Repeated",
-		span: "Image Spot",
-	},
-	{
-		image: gal3,
-		i: "Another",
-		span: "Exercise Time",
-	},
-	{
-		image: gal4,
-		i: "Repeated",
-		span: "Image Spot",
-	},
-	{
-		image: gal5,
-		i: "Offices",
-		span: "Workstation",
-	},
-	{
-		image: gal6,
-		i: "Just Above",
-		span: "The City",
-	},
-	{
-		image: gal1,
-		i: "Another",
-		span: "Exercise Time",
-	},
-	{
-		image: gal2,
-		i: "Repeated",
-		span: "Image Spot",
-	},
-	{
-		image: gal3,
-		i: "Another",
-		span: "Exercise Time",
-	},
-	{
-		image: gal4,
-		i: "Repeated",
-		span: "Image Spot",
-	},
-	{
-		image: gal5,
-		i: "Offices",
-		span: "Workstation",
-	},
-	{
-		image: gal6,
-		i: "Just Above",
-		span: "The City",
-	},
-	{
-		image: gal4,
-		i: "Repeated",
-		span: "Image Spot",
-	},
-	{
-		image: gal5,
-		i: "Offices",
-		span: "Workstation",
-	},
-	{
-		image: gal6,
-		i: "Just Above",
-		span: "The City",
-	},
-];
 
 function Projects() {
 	const { isMobile, width } = useDevice()
 	const ITEMS_PER_PAGE = isMobile?4:width<=1024?9:8;
 	// const [pageLoading, setPageLoading] = useState(true);
-	// const [arrays, setArrays] = useState(projectsArr.slice(0, 10))
+	// const [arrays, setArrays] = useState(projects.slice(0, 10))
 	const [page, setPage] = useState(0);
 	const start = page * ITEMS_PER_PAGE;
 	const end = start + ITEMS_PER_PAGE;
-	const currentItems = projectsArr.slice(start, end);
+	const currentItems = projects.slice(start, end);
 	const nextPage = () => {
-		if ((page + 1) * ITEMS_PER_PAGE < projectsArr.length) {
+		if ((page + 1) * ITEMS_PER_PAGE < projects.length) {
 			setPage(prev => prev + 1);
 		}
 	};
@@ -137,16 +23,8 @@ function Projects() {
 			setPage(prev => prev - 1);
 		}
 	};
-	// useEffect(() => {
-	// 	const timer = setTimeout(() => {
-	// 		setPageLoading(false);
-	// 	}, 500); // small delay so spinner is visible
-	
-	// 	return () => clearTimeout(timer);
-	// }, []);
 	const firstPage = page === 0
-	const lastPage = (page + 1) * ITEMS_PER_PAGE >= projectsArr.length
-	console.log("Current page:", page);
+	const lastPage = (page + 1) * ITEMS_PER_PAGE >= projects.length
 	return (
 		<>
 			<div className={`container px-1 mayor-container-projects`}>

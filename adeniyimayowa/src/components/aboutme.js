@@ -1,41 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { experiances, education, certifications } from "../entry/entry";
 
-const experiances = [
-    {
-        title: "Market Analyst",
-        company: "Job Holdings Ltd",
-        duties: "Praesent sed pharetra lorem, blandit convallis mi. Aenean ornare elit ac metus lacinia, sed iaculis nibh semper. Pellentesque est urna."
-    },
-    {
-        title: "Support Analyst",
-        company: "Taxify International",
-        duties: "Praesent sed pharetra lorem, blandit convallis mi. Aenean ornare elit ac metus lacinia, sed iaculis nibh semper. Pellentesque est urna."
-    },
-]
-const education = [
-    {
-        course: "Data Analytics",
-        degree: "Bachelor of Science (Bsc)",
-        school: "University of Lagos (UNILAG)."
-    },
-    {
-        course: "West African Examination Council (WAEC)",
-        degree: "Senor Secondary School Certificate Examination (SSCE)",
-        school: "Lagos State Model College Badore."
-    },
-]
-const certifications = [
-    {
-        title: "Data Analytics Professional",
-        cerification: "Data Science in Analytics (specialization)",
-        institution: "Cousera (Google)"
-    },
-    {
-        title: "Data Science Professional Certification",
-        cerification: "Analytics for Scientists",
-        institution: "Cousera (Meta)"
-    },
-]
 function AboutMe() {
 	return (
 		<>

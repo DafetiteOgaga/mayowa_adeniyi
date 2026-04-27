@@ -40,7 +40,6 @@ function App() {
   const pageLoadingRef = useRef()
   const { setPageLoading, SpinnerComponent, pageLoading } = useSpinner()
   const { label, width, isMobile } = useDevice()
-  console.log({ label, width, isMobile })
   const location = useLocation().pathname;
 
   // useEffect(() => {
@@ -90,16 +89,6 @@ function App() {
     return () => clearTimeout(timer);
   }, [location]);
 
-  // useEffect(() => {
-  //   setPageLoading(true);
-  
-  //   const timer = setTimeout(() => {
-  //     setPageLoading(false);
-  //   }, 400);
-  
-  //   return () => clearTimeout(timer);
-  // }, [location]);
-  console.log('✨'.repeat(10), {pageLoading})
   return (
       <>
           <section className={`spinner-loading ${pageLoading?'':'d-none'}`}>

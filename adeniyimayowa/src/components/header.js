@@ -28,16 +28,15 @@ function Header() {
 	const location = useLocation().pathname.split("/")[1]
 	useEffect(() => {
 		if (isMenuOpen) {
-		  document.body.style.overflow = "hidden"; // 🚫 disable scroll
+		  document.body.style.overflow = "hidden"; // disable scroll
 		} else {
-		  document.body.style.overflow = ""; // ✅ restore scroll
+		  document.body.style.overflow = ""; // restore scroll
 		}
 		// cleanup (important when component unmounts)
 		return () => {
 			document.body.style.overflow = "";
 		};
 	}, [isMenuOpen]);
-	console.log({location})
 	return (
 		<>
 			<nav className="navbar navbar-expand-md mayor-navbar pt-3">
