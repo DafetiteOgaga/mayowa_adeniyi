@@ -27,7 +27,7 @@ function Projects() {
 	const lastPage = (page + 1) * ITEMS_PER_PAGE >= projects.length
 	return (
 		<>
-			<div className={`container px-1 mayor-container-projects`}>
+			<div className={`container mayor-container-projects`}>
 				{/* {pageLoading?
 				<>
 					<Spinner type="dot" />
