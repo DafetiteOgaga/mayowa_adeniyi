@@ -341,8 +341,15 @@ section.home {
   margin: 1rem 0 0 0;
 }
 
+.d-inline {
+  display: inline !important;
+}
+.d-inline-block {
+  display: inline-block !important;
+}
 .hero-expandable {
   display: inline-block;
+  /* white-space: nowrap; */
   overflow: hidden;
   max-height: 0;
   opacity: 0;
