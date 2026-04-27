@@ -119,8 +119,8 @@ const projectsArr = [
 ];
 
 function Projects() {
-	const { isMobile } = useDevice()
-	const ITEMS_PER_PAGE = isMobile?4:8;
+	const { isMobile, width } = useDevice()
+	const ITEMS_PER_PAGE = isMobile?4:width<=1024?9:8;
 	// const [pageLoading, setPageLoading] = useState(true);
 	// const [arrays, setArrays] = useState(projectsArr.slice(0, 10))
 	const [page, setPage] = useState(0);

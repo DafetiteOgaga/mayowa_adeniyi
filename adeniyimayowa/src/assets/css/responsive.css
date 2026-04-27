@@ -1,0 +1,263 @@
+
+
+
+@media (max-width: 1300px) {
+	.mayor-hero-img {
+		height: 70%;
+	}
+	p {
+		line-height: 1.5;
+	}
+}
+
+@media (max-width: 1024px) {
+	.mayor-hero-text-container {
+		display: flex;
+		flex-direction: column;
+		margin: auto 40px;
+		gap: 3px;
+		padding-top: 0;
+	}
+	.mayor-hero-img-container {
+		width: 30%;
+	}
+	.mayor-hero-img {
+		width: 100%;
+	}
+	.mayor-hero-name {
+		text-align: center;
+	}
+	.mayor-hero-title {
+		text-align: center;
+	}
+	.mayor-intro-text-container {
+		padding-top: 30px;
+		max-width: 600px;
+	}
+	.mayor-hero-img {
+        height: 55%;
+    }
+	.mayor-projects {
+		margin-left: 13%;
+	}
+}
+
+@media (max-width: 900px) {
+	/* .mayor-hero-text-container {
+		display: flex;
+		flex-direction: column;
+		margin: auto 40px;
+		gap: 3px;
+		padding-top: 0;
+	} */
+	.mayor-hero-img-container {
+		width: 40%;
+	}
+	/* .mayor-hero-img {
+		width: 100%;
+	} */
+	/* .mayor-hero-name {
+		text-align: center;
+	}
+	.mayor-hero-title {
+		text-align: center;
+	} */
+	.mayor-projects {
+        margin-left: 8%;
+		width: 100%;
+    }
+	.container {
+        max-width: 850px !important;
+    }
+}
+
+@media (max-width: 800px) {
+	.mayor-projects {
+        margin-left: 2%;
+    }
+	.container {
+        max-width: 740px !important;
+    }
+}
+
+@media (max-width: 768px) {
+	nav {
+		padding-top: 25px !important;
+	}
+	.navbar-nav {
+		max-width: 110px;
+		text-align: right;
+	}
+
+	.navbar-hide {
+		flex-basis: 100%;
+		flex-grow: 1;
+		align-items: center;
+		border-radius: 3px;
+		position: fixed;
+		top: 50px;
+		right: 15px;
+	}
+	.navbar-hide .nav-link {
+		/* color: var(--fontColor); */
+		font-size: 17px;
+		white-space: pre;
+		/* padding-right: 12px; */
+		padding: 15px 12px;
+	}
+	/* ............. */
+	.navbar-hide.d-show {
+		display: block;
+	}
+  	/* .................... */
+	.mayor-font-big {
+		font-size: medium;
+	}
+	.mayor-hero-text-container {
+		/* display: flex;
+		flex-direction: column; */
+		margin: auto;
+		/* gap: 3px;
+		padding-top: 0; */
+	}
+	.mayor-hero-img-container {
+		width: 80%;
+	}
+	.mayor-hero-img {
+		width: 100%;
+	}
+	section.home {
+		padding-top: 65px;
+		height: auto;
+	}
+	.mayor-hero-name {
+		font-size: 2rem;
+		text-align: center;
+		margin-bottom: 0;
+	}
+	.mayor-hero-title {
+		font-size: 1.5rem;
+		text-align: center;
+	}
+	.mayor-hero-subtitle {
+		text-align: center;
+	}
+	.mx-hero {
+		margin: auto 15px !important;
+	}
+	section.about-me {
+		padding-top: 65px;
+	}
+	.mayor-section-title {
+		font-size: 1.8rem;
+		margin-bottom: 0.5rem !important;
+		text-align: center;
+	}
+	.about-me-content {
+		display: block !important;
+	}
+	.mayor-intro-text {
+		margin-bottom: 1rem !important;
+	}
+	.mayor-intro-text-container {
+		padding: 15px 10px 5px 10px;
+	}
+	.mayor-intro-text-container.rm-pt {
+		padding: 0px 10px;
+	}
+	.mayor-intro-text-container.experience h3 {
+		font-size: 23px;
+	}
+	.mayor-intro-text-container.experience h5 {
+		font-size: 20px;
+	}
+	.projects p {
+	}
+	.mayor-projects {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin: 0;
+	}
+	.mayor-projects a {
+		padding: 5px;
+	}
+	.projects .project-cards {
+		min-height: 68vh;
+	}
+	.arrow {
+		margin: auto 5px;
+		transform: translateY(-350%);
+		background-color: var(--transparentLightBlue)
+	};
+	.about-me-content .cert,
+	.about-me-content .edu {
+		padding: 5px 10px;
+	}
+	.about-me-content .cert h5,
+	.about-me-content .edu h5 {
+		font-size: 20px;
+	}
+	.about-me-content .cert h6,
+	.about-me-content .edu h6 {
+		font-size: 19px;
+	}
+	.about-me-content .cert p,
+	.about-me-content .edu p {
+		margin-bottom: 0.1rem !important;
+	}
+	.contact-me p {
+		margin-bottom: 0.5rem !important;
+	}
+	.mayor-input {
+		margin: 0 0 5px 0;
+		width: 100%;
+		padding: 8px;
+		font-size: 0.95rem !important;
+	}
+	.about-me .certification-h3,
+	.about-me .education-h3 {
+		font-size: 22px;
+		padding-top: 10px;
+		margin: 0 10px;
+	}
+	.mayor-projects-item {
+		margin: 0;
+	}
+	p {
+		font-size: var(--mparagraph) !important;
+	}
+	button {
+		font-size: var(--mparagraph) !important;
+	}
+}
+
+@media (max-width: 480px) {
+	.arrow {
+        transform: translateY(-370%);
+    }
+}
+
+@media (max-width: 420px) {
+	.arrow {
+        transform: translateY(-390%);
+    }
+}
+
+@media (max-width: 400px) {
+	.arrow {
+        transform: translateY(-340%);
+    }
+	.mayor-section-title {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 380px) {
+	.arrow {
+        transform: translateY(-350%);
+    }
+	.mayor-section-title {
+        font-size: 1.6rem;
+    }
+}
+

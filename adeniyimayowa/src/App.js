@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import './assets/css/bootstrap.min.css'
 import './App.css';
 import './assets/css/main.css'
+import './assets/css/responsive.css'
 import { useSpinner } from './context/spinner/spinner';
 // import './assets/css/responsive.css'
 // import './assets/css/all.min.css'
