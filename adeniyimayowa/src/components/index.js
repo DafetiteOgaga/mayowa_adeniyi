@@ -11,7 +11,6 @@ function Index() {
 				<Outlet context={{}} />
 				<Footer />
 			</section>
-			{/* <Footer /> */}
 		</>
 	)
 }
