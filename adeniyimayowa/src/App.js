@@ -5,6 +5,7 @@ import './assets/css/bootstrap.min.css'
 import './App.css';
 import './assets/css/main.css'
 import './assets/css/responsive.css'
+import './assets/css/animations.css'
 import { useSpinner } from './context/spinner/spinner';
 // import './assets/css/responsive.css'
 // import './assets/css/all.min.css'
@@ -42,42 +43,42 @@ function App() {
   const { label, width, isMobile } = useDevice()
   const location = useLocation().pathname;
 
-  // useEffect(() => {
-  //   const raf = requestAnimationFrame(() => {
-  //     const animatedElements = document.querySelectorAll(".animate");
+  useEffect(() => {
+    const raf = requestAnimationFrame(() => {
+      const animatedElements = document.querySelectorAll(".animate");
   
-  //     const observer = new IntersectionObserver(
-  //       (entries) => {
-  //         entries.forEach((entry) => {
-  //           if (entry.isIntersecting) {
-  //             entry.target.classList.add("in-view");
-  //             // observer.unobserve(entry.target);
-  //           } else {
-  //             entry.target.classList.remove("in-view");
-  //           }
-  //         });
-  //       },
-  //       {
-  //         threshold: 0.15,
-  //         rootMargin: "0px 0px -50px 0px",
-  //       }
-  //     );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+              // observer.unobserve(entry.target);
+            } else {
+              entry.target.classList.remove("in-view");
+            }
+          });
+        },
+        {
+          threshold: 0.15,
+          rootMargin: "0px 0px -50px 0px",
+        }
+      );
   
-  //     animatedElements.forEach((el) => observer.observe(el));
+      animatedElements.forEach((el) => observer.observe(el));
   
-  //     // store observer on window temporarily so cleanup can access it
-  //     window.__pageObserver = observer;
-  //   });
+      // store observer on window temporarily so cleanup can access it
+      window.__pageObserver = observer;
+    });
   
-  //   return () => {
-  //     cancelAnimationFrame(raf);
+    return () => {
+      cancelAnimationFrame(raf);
   
-  //     if (window.__pageObserver) {
-  //       window.__pageObserver.disconnect();
-  //       window.__pageObserver = null;
-  //     }
-  //   };
-  // }, [location]);
+      if (window.__pageObserver) {
+        window.__pageObserver.disconnect();
+        window.__pageObserver = null;
+      }
+    };
+  }, [location]);
 
   useLayoutEffect(() => {
     setPageLoading(true);
