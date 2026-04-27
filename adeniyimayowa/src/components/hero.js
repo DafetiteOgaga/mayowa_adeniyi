@@ -7,16 +7,20 @@ function LandingPage() {
 	const [showRemainingPara, setShowRemainingPara] = useState(false)
 	const { width } = useDevice()
 	const isDesktop = width > 768
+	const words = professionalSummary.split(" ");
 	let slicePoint;
 	if (width > 420) {
-		slicePoint = 430;
+		slicePoint = 45;
 	} else if (width > 410) {
-		slicePoint = 450;
+		slicePoint = 45;
 	} else if (width > 380) {
-		slicePoint = 290;
+		slicePoint = 35;
 	} else {
-		slicePoint = 220;
+		slicePoint = 25;
 	}
+	// console.log({words})
+	const visibleText = words.slice(0, slicePoint).join(" ");
+	const remainingText = words.slice(slicePoint).join(" ");
 	return (
 		<>
 			<div className="mayor-hero-text-container">
@@ -29,18 +33,21 @@ function LandingPage() {
 					<h3 className="mayor-hero-name animate slide-from-left">Mayowa Adeniyi</h3>
 					<h2 className="mayor-hero-title mb-0 italic animate slide-from-right">Business Intelligence Analyst</h2>
 					<p className="mayor-hero-subtitle animate slide-from-bottom">
-						<span>
-							{professionalSummary.slice(0, slicePoint)}
+						<span className='d-inline'>
+							{visibleText}
 						</span>
-						{/* ellipsis part */}
-						<span className={`fade-ellipsis ${showRemainingPara ? "hide" : ""}`}>
-							...
-						</span>
+						{!(isDesktop||showRemainingPara) && "..."}
 						{/* expandable part */}
+						{isDesktop?
 						<span
-							className={`hero-expandable ${(isDesktop||showRemainingPara) ? "open" : ""}`}>
-							{professionalSummary.slice(slicePoint)}
+							className={`d-inline`}>
+							{remainingText}
 						</span>
+						:
+						<span
+							className={`hero-expandable ${(showRemainingPara) ? "open" : ""}`}>
+							{remainingText}
+						</span>}
 					</p>
 					<button
 					onClick={()=>setShowRemainingPara(prev=>!prev)}
