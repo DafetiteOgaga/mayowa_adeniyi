@@ -4,7 +4,6 @@ import { Footer } from './footer';
 
 function Index() {
 	const location = useLocation().pathname.split("/")[1]
-	console.log({location})
 	return (
 		<>
 			<Header />
