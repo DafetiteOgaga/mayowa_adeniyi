@@ -1,12 +1,16 @@
-import { useEffect } from 'react';
+import { useEffect, useState, useRef, useLayoutEffect } from 'react';
 import { AppRoutes } from './routes/routes';
 import { useLocation } from 'react-router-dom';
 import './assets/css/bootstrap.min.css'
 import './App.css';
 import './assets/css/main.css'
+import './assets/css/responsive.css'
+import './assets/css/animations.css'
+import { useSpinner } from './context/spinner/spinner';
 // import './assets/css/responsive.css'
 // import './assets/css/all.min.css'
 // import './assets/css/animations.css'
+import { useDevice } from './context/deviceTypeContext';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faEye, faEyeSlash, faCircleCheck, faCheck, faTimes,
   faBars, faCopy, faArrowsRotate, faDownload, faGear, faCogs,
@@ -15,7 +19,9 @@ import { faEye, faEyeSlash, faCircleCheck, faCheck, faTimes,
   faCirclePlus, faBullseye, faLightbulb, faSchool,
   faHandsHelping, faPuzzlePiece, faPencil, faGraduationCap,
   faEnvelope, faPhone, faLocationDot, faComment,
-  faCommentAlt, faPhoneSquare,
+  faCommentAlt, faPhoneSquare, faChartBar, faArrowLeftLong,
+  faArrowLeft, faArrowRightLong, faArrowRight, faLessThan,
+  faGreaterThan, faChevronLeft, faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 library.add(
   faEye, faEyeSlash, faCircleCheck, faCheck,
@@ -26,11 +32,17 @@ library.add(
   faMinus, faCirclePlus, faBullseye, faLightbulb, faSchool,
   faHandsHelping, faPuzzlePiece, faPencil, faGraduationCap,
   faEnvelope, faPhone, faLocationDot, faComment,
-  faCommentAlt, faPhoneSquare,
+  faCommentAlt, faPhoneSquare, faChartBar, faArrowLeftLong,
+  faArrowLeft, faArrowRightLong, faArrowRight, faLessThan,
+  faGreaterThan, faChevronLeft, faChevronRight,
 );
 
 function App() {
+  const pageLoadingRef = useRef()
+  const { setPageLoading, SpinnerComponent, pageLoading } = useSpinner()
+  const { label, width, isMobile } = useDevice()
   const location = useLocation().pathname;
+
   useEffect(() => {
     const raf = requestAnimationFrame(() => {
       const animatedElements = document.querySelectorAll(".animate");
@@ -67,10 +79,26 @@ function App() {
       }
     };
   }, [location]);
+
+  useLayoutEffect(() => {
+    setPageLoading(true);
+  
+    const timer = setTimeout(() => {
+      setPageLoading(false);
+    }, 400);
+  
+    return () => clearTimeout(timer);
+  }, [location]);
+
   return (
-    <>
-        <AppRoutes />
-    </>
+      <>
+          <section className={`spinner-loading ${pageLoading?'':'d-none'}`}>
+            <SpinnerComponent />
+          </section>
+          <div className={pageLoading ? 'd-none' : ''}>
+            <AppRoutes />
+          </div>
+      </>
   );
 }
 

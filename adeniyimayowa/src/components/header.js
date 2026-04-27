@@ -1,5 +1,8 @@
 import { Link, useLocation } from 'react-router-dom'
 import { Socials } from './socials'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useDevice } from '../context/deviceTypeContext'
+import { useState, useEffect } from 'react';
 
 const headerMenuArr = [
 	{
@@ -11,38 +14,75 @@ const headerMenuArr = [
 		link: "projects",
 	},
 	{
+		name: "About Me",
+		link: "about-me",
+	},
+	{
 		name: "Contact Me",
 		link: "contact-me",
 	}
 ]
 function Header() {
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	const { label, width, isMobile } = useDevice()
 	const location = useLocation().pathname.split("/")[1]
-	console.log({location})
+	useEffect(() => {
+		if (isMenuOpen) {
+		  document.body.style.overflow = "hidden"; // disable scroll
+		} else {
+		  document.body.style.overflow = ""; // restore scroll
+		}
+		// cleanup (important when component unmounts)
+		return () => {
+			document.body.style.overflow = "";
+		};
+	}, [isMenuOpen]);
 	return (
-		<nav className="navbar navbar-expand-md mayor-navbar" id="tmNav">
-			<div className="container">
-				<Socials />
-				<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<i className="fas fa-bars navbar-toggler-icon"></i>
-				</button>
-				<div className="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul className="navbar-nav ml-auto">
-						{headerMenuArr.map((item, idx) => {
-							const isActive = location === item.link
-							return (
-								<li key={idx} className="nav-item">
-									<Link
-									className={`nav-link mayor-nav-link
-												${isActive?'active':''}
-												${(idx===0)?'first':(idx===headerMenuArr.length-1)?'last':'middle'}`}
-									to={item.link}>{item.name}</Link>
+		<>
+			<nav className="navbar navbar-expand-md mayor-navbar pt-3">
+				<div className="container">
+					<Socials {...{setIsMenuOpen, isMenuOpen}} />
+					<div className='position-relative'>
+						<button className="navbar-toggler"
+						onClick={()=>setIsMenuOpen(prev=>!prev)}>
+							<FontAwesomeIcon icon={isMenuOpen?"times":"bars"} size={"md"} />
+						</button>
+						<div className={`${isMobile?'navbar-hide':'d-block header-bar'} ${isMenuOpen ? 'd-show' : 'd-none'}`}
+						onClick={()=>setIsMenuOpen(false)}>
+							<ul className="navbar-nav justify-self-end"
+							onClick={()=>setIsMenuOpen(false)}>
+								{headerMenuArr.map((item, idx) => {
+									const isActive = location === item.link
+									const first = idx===0
+									const last = idx===headerMenuArr.length-1
+									return (
+										<li key={idx} className="nav-item">
+											<Link
+											className={`nav-link mayor-nav-link
+														${isActive?'active':''}
+														${isMobile?((first)?'top-item':(last)?'bottom-item':'middle'):
+														(first)?'first':(last)?'last':'middle'}`}
+											to={item.link}>{item.name}</Link>
+										</li>
+									)
+								})}
+								<li className="nav-item">
+									<span
+									className={`nav-link`}>
+										{width}px
+									</span>
 								</li>
-							)
-						})}
-					</ul>
+							</ul>
+						</div>
+					</div>
 				</div>
-			</div>
-		</nav>
+			</nav>
+			{(isMobile && isMenuOpen) && (
+			<div className='overlay'
+				onClick={() => setIsMenuOpen(false)}
+			/>
+			)}
+		</>
 	)
 }
 
