@@ -230,6 +230,11 @@ section.projects {
   color: var(--lightBlue);
 }
 
+.socials-container {
+  display: flex;
+  align-items: center;
+}
+
 .mayor-navbar.scroll .navbar-brand {
   color: var(--lightBlue);
 }

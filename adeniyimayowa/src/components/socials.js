@@ -1,9 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useDevice } from "../context/deviceTypeContext";
 import { email, phoneNumber } from "../entry/entry";
 
-const commArr = [
+const socialsArr = [
+	{
+		icon: "home",
+		name: "Home",
+		link: "/"
+	},
 	{
 		icon: "linkedin",
 		name: "LinkedIn",
@@ -43,24 +48,30 @@ const commArr = [
 	}
 ]
 function Socials({setIsMenuOpen, isMenuOpen}) {
+	const location = useLocation().pathname.split("/")[1]
+	console.log({location})
 	const { label, width, isMobile } = useDevice()
 	return (
-		<div className={`d-flex ${(isMobile&&isMenuOpen)?'':''}`}
+		<div className={`socials-container ${(isMobile&&isMenuOpen)?'':''}`}
 		onClick={()=>{
 			if (isMobile&&isMenuOpen) {
 				setIsMenuOpen(false)
 			}
 		}}>
-			{commArr.map((contact, cIdx) => {
+			{socialsArr.map((social, cIdx) => {
+				const isHome = social.name.toLowerCase()==="home"
+				if (isHome&&!location) {
+					return
+				}
 				return (
 					<div key={cIdx} className={`contact-item ${!cIdx?'ml-0':''}`}>
 						<Link
 						rel="nofollow"
-						to={contact.link}
+						to={social.link}
 						className={`item-link ${(isMobile&&isMenuOpen)?'overlay-icon-color':''}`}>
 							<FontAwesomeIcon
-							icon={contact.fab?[contact.fab, contact.icon]:contact.icon}
-							size={"lg"}
+							icon={social.fab?[social.fab, social.icon]:social.icon}
+							size={isHome?"2x":"lg"}
 							/>
 							{/* <span>&nbsp;</span> */}
 							{/* <span className="mb-0">{contact.name}</span> */}

@@ -22,7 +22,8 @@ import { faEye, faEyeSlash, faCircleCheck, faCheck, faTimes,
   faEnvelope, faPhone, faLocationDot, faComment,
   faCommentAlt, faPhoneSquare, faChartBar, faArrowLeftLong,
   faArrowLeft, faArrowRightLong, faArrowRight, faLessThan,
-  faGreaterThan, faChevronLeft, faChevronRight,
+  faGreaterThan, faChevronLeft, faChevronRight, faHomeLg,
+  faHome,
 } from "@fortawesome/free-solid-svg-icons";
 library.add(
   faEye, faEyeSlash, faCircleCheck, faCheck,
@@ -36,7 +37,7 @@ library.add(
   faCommentAlt, faPhoneSquare, faChartBar, faArrowLeftLong,
   faArrowLeft, faArrowRightLong, faArrowRight, faLessThan,
   faGreaterThan, faChevronLeft, faChevronRight, faLinkedin,
-  faGithub
+  faGithub, faHomeLg, faHome,
 );
 
 function App() {
