@@ -52,9 +52,6 @@ function Projects() {
 											<Link key={`${page}-${pIdx}`}
 											className=''
 											// to=""
-											// style={{
-											// 	animationDelay: `${pIdx * 0.25}s`,
-											// }}
 											>
 												<figure className={`effect-honey mayor-projects-item swap-animate swap-slide-right`}
 												style={{
