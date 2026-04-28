@@ -12,12 +12,13 @@ function LandingPage() {
 	if (width > 420) {
 		slicePoint = 45;
 	} else if (width > 410) {
-		slicePoint = 45;
+		slicePoint = 50;
 	} else if (width > 380) {
-		slicePoint = 35;
+		slicePoint = 50;
 	} else {
-		slicePoint = 25;
+		slicePoint = 50;
 	}
+	// console.log({})
 	// console.log({words})
 	const visibleText = words.slice(0, slicePoint).join(" ");
 	const remainingText = words.slice(slicePoint).join(" ");
@@ -28,7 +29,6 @@ function LandingPage() {
 					<img className='mayor-hero-img animate slide-from-top' src={profilePicture} alt='oh' />
 				</div>
 				<div
-				// style={{margin: "auto"}}
 				className="mx-hero">
 					<h3 className="mayor-hero-name animate slide-from-left">Mayowa Adeniyi</h3>
 					<h2 className="mayor-hero-title mb-0 italic animate slide-from-right">Business Intelligence Analyst</h2>
@@ -38,9 +38,7 @@ function LandingPage() {
 								<span key={idx}
 								className='animate slide-from-left mb-0'
 								style={{
-									display: "inline-block",
 									transitionDelay: `${idx * 0.2}s`,
-									whiteSpace: "pre",
 								}}>
 									{`${item} ${(idx!==stack.length-1)?' || ':''}`}
 								</span>
