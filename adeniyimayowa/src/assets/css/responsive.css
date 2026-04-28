@@ -3,7 +3,7 @@
 
 @media (max-width: 1300px) {
 	.mayor-hero-img {
-		height: 70%;
+		height: 65%;
 	}
 	p {
 		line-height: 1.5;
@@ -25,6 +25,9 @@
 		width: 100%;
 	}
 	.mayor-hero-name {
+		text-align: center;
+	}
+	.mayor-stack {
 		text-align: center;
 	}
 	.mayor-hero-title {
