@@ -11,6 +11,7 @@ import { useSpinner } from './context/spinner/spinner';
 // import './assets/css/all.min.css'
 // import './assets/css/animations.css'
 import { useDevice } from './context/deviceTypeContext';
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faEye, faEyeSlash, faCircleCheck, faCheck, faTimes,
   faBars, faCopy, faArrowsRotate, faDownload, faGear, faCogs,
@@ -34,7 +35,8 @@ library.add(
   faEnvelope, faPhone, faLocationDot, faComment,
   faCommentAlt, faPhoneSquare, faChartBar, faArrowLeftLong,
   faArrowLeft, faArrowRightLong, faArrowRight, faLessThan,
-  faGreaterThan, faChevronLeft, faChevronRight,
+  faGreaterThan, faChevronLeft, faChevronRight, faLinkedin,
+  faGithub
 );
 
 function App() {

@@ -3,39 +3,40 @@
 	opacity: 0;
   transition: opacity 1.2s ease, transform 0.8s ease;
   will-change: transform, opacity;
+  contain: layout paint;
   }
   
   /* Directions (initial state only) */
   .slide-from-bottom {
-	transform: translateY(60px);
+	transform: translateY(40px);
   }
   
   .slide-from-top {
-	transform: translateY(-60px);
+	transform: translateY(-40px);
   }
   
   .slide-from-left {
-	transform: translateX(-60px);
+	transform: translateX(-40px);
   }
   
   .slide-from-right {
-	transform: translateX(60px);
+	transform: translateX(40px);
   }
   
   .slide-from-bottom-right {
-	transform: translate(60px, 60px);
+	transform: translate(40px, 40px);
   }
   
   .slide-from-bottom-left {
-	transform: translate(-60px, 60px);
+	transform: translate(-40px, 40px);
   }
   
   .slide-from-top-right {
-	transform: translate(60px, -60px);
+	transform: translate(40px, -40px);
   }
   
   .slide-from-top-left {
-	transform: translate(-60px, -60px);
+	transform: translate(-40px, -40px);
   }
   
   /* ACTIVE state (triggered by observer) */
@@ -58,6 +59,7 @@
 	animation-duration: 1.2s;
 	animation-timing-function: ease;
 	animation-fill-mode: forwards;
+  contain: layout paint;
   }
   
   .swap-slide-right {
