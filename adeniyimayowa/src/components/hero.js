@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
-import imageimage from '../assets/img/mayor.jpeg'
 import { useDevice } from '../context/deviceTypeContext'
-import { professionalSummary } from '../entry/entry'
+import { professionalSummary, profilePicture, stack } from '../entry/entry'
 
 function LandingPage() {
 	const [showRemainingPara, setShowRemainingPara] = useState(false)
 	const { width } = useDevice()
 	const isDesktop = width > 768
-	const words = professionalSummary.split(" ");
+	let words = professionalSummary.split(" ");
+	words = words.slice(0, 120)
 	let slicePoint;
 	if (width > 420) {
 		slicePoint = 45;
@@ -25,14 +25,29 @@ function LandingPage() {
 		<>
 			<div className="mayor-hero-text-container">
 				<div className='mayor-hero-img-container'>
-					<img className='mayor-hero-img animate slide-from-top' src={imageimage} alt='oh' />
+					<img className='mayor-hero-img animate slide-from-top' src={profilePicture} alt='oh' />
 				</div>
 				<div
 				// style={{margin: "auto"}}
 				className="mx-hero">
 					<h3 className="mayor-hero-name animate slide-from-left">Mayowa Adeniyi</h3>
 					<h2 className="mayor-hero-title mb-0 italic animate slide-from-right">Business Intelligence Analyst</h2>
-					<p className="mayor-hero-subtitle animate slide-from-bottom">
+					<h6 className='mayor-stack'>
+						{stack.map((item, idx) => {
+							return (
+								<span key={idx}
+								className='animate slide-from-left mb-0'
+								style={{
+									display: "inline-block",
+									transitionDelay: `${idx * 0.2}s`,
+									whiteSpace: "pre",
+								}}>
+									{`${item} ${(idx!==stack.length-1)?' || ':''}`}
+								</span>
+							)
+						})}
+					</h6>
+					<p className="mayor-hero-subtitle animate slide-from-bottom m-0">
 						<span className='d-inline'>
 							{visibleText}
 						</span>
