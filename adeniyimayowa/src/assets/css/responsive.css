@@ -235,6 +235,20 @@
 	button {
 		font-size: var(--mparagraph) !important;
 	}
+	/* toast styling */
+	.Toastify__toast-container--top-center {
+        margin-top: 20px !important;
+        /* width: auto; */
+        /* white-space: pre; */
+    }
+    .custom_toast {
+        max-width: 95%;
+        min-width: 50%;
+        width: max-content;
+        font-size: 0.8rem;
+        margin: 0 auto;
+		background-color: var(--lightBlue) !important;
+    }
 }
 
 @media (max-width: 480px) {
