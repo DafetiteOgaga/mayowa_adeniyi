@@ -3,10 +3,11 @@ import { AppRoutes } from './routes/routes';
 import { useLocation } from 'react-router-dom';
 import './assets/css/bootstrap.min.css'
 import './App.css';
-import './assets/css/main.css'
-import './assets/css/responsive.css'
-import './assets/css/animations.css'
+import './assets/css/main.css';
+import './assets/css/responsive.css';
+import './assets/css/animations.css';
 import { useSpinner } from './context/spinner/spinner';
+import { ToastContainer } from 'react-toastify';
 // import './assets/css/responsive.css'
 // import './assets/css/all.min.css'
 // import './assets/css/animations.css'
@@ -100,6 +101,19 @@ function App() {
           </section>
           <div className={pageLoading ? 'd-none' : ''}>
             <AppRoutes />
+            <ToastContainer
+            toastClassName="custom_toast"
+            position={isMobile?"top-center":"top-right"}
+            autoClose={6000} // 3 seconds (you can increase if needed)
+            // autoClose={false} // 3 seconds (you can increase if needed)
+            hideProgressBar={false}
+            newestOnTop={true}
+            closeOnClick
+            // rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            />
           </div>
       </>
   );
