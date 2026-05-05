@@ -253,13 +253,13 @@
 
 @media (max-width: 480px) {
 	.arrow {
-        transform: translateY(-350%);
+        transform: translateY(-395%);
     }
 }
 
 @media (max-width: 420px) {
 	.arrow {
-        transform: translateY(-340%);
+        transform: translateY(-410%);
     }
 }
 
@@ -274,13 +274,13 @@
 
 @media (max-width: 390px) {
 	.arrow {
-        transform: translateY(-320%);
+        transform: translateY(-360%);
     }
 }
 
 @media (max-width: 380px) {
 	.arrow {
-        transform: translateY(-300%);
+        transform: translateY(-375%);
     }
 	.mayor-section-title {
         font-size: 1.6rem;
