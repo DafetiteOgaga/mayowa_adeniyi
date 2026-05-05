@@ -85,7 +85,7 @@ function Contact() {
 			apiKey: apiKey, // 'brevo-api-key',
 			apiEmail: apiEmail, // brevo email address
 			// ownerEmail: 'ogagadafetite@gmail.com', // your-email',
-			ownerEmail: name, // your-email',
+			ownerEmail: email, // your-email',
 			senderName: name, // 'Your Website Name'
 		};
 
