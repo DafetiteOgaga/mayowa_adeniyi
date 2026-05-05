@@ -62,7 +62,7 @@ function Projects() {
 										</Link>
 									)
 								})}
-								<div className="project-nav-btns">
+								{/* <div className="project-nav-btns">
 									<button
 									className={`arrow left ${firstPage?'d-none':''}`}
 									onClick={prevPage}
@@ -77,8 +77,40 @@ function Projects() {
 									>
 										<FontAwesomeIcon icon="chevron-right" size='3x' />
 									</button>
-								</div>
+								</div> */}
 							</div>
+							{/* <div className="project-nav-btns">
+								<button
+								className={`arrow left ${firstPage?'d-none':''}`}
+								onClick={prevPage}
+								disabled={firstPage}>
+									<FontAwesomeIcon icon="chevron-left" size='3x' />
+								</button>
+
+								<button
+								className={`arrow right ${lastPage?'d-none':''}`}
+								onClick={nextPage}
+								disabled={lastPage}
+								>
+									<FontAwesomeIcon icon="chevron-right" size='3x' />
+								</button>
+							</div> */}
+						</div>
+						<div className="project-nav-btns">
+							<button
+							className={`arrow left ${firstPage?'d-none':''}`}
+							onClick={prevPage}
+							disabled={firstPage}>
+								<FontAwesomeIcon icon="chevron-left" size='3x' />
+							</button>
+
+							<button
+							className={`arrow right ${lastPage?'d-none':''}`}
+							onClick={nextPage}
+							disabled={lastPage}
+							>
+								<FontAwesomeIcon icon="chevron-right" size='3x' />
+							</button>
 						</div>
 					</div>
 				</div>
