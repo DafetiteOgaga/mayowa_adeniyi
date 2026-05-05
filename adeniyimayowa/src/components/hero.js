@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useDevice } from '../context/deviceTypeContext'
-import { professionalSummary, profilePicture, stack } from '../entry/entry'
+import { professionalSummary, profilePicture, stack, name, professionalTitle, } from '../entry/entry'
 
 function LandingPage() {
 	const [showRemainingPara, setShowRemainingPara] = useState(false)
@@ -30,8 +30,8 @@ function LandingPage() {
 				</div>
 				<div
 				className="mx-hero">
-					<h3 className="mayor-hero-name animate slide-from-left">Mayowa Adeniyi</h3>
-					<h2 className="mayor-hero-title mb-0 italic animate slide-from-right">Business Intelligence Analyst</h2>
+					<h3 className="mayor-hero-name animate slide-from-left">{name}</h3>
+					<h2 className="mayor-hero-title mb-0 italic animate slide-from-right">{professionalTitle}</h2>
 					<h6 className='mayor-stack'>
 						{stack.map((item, idx) => {
 							return (

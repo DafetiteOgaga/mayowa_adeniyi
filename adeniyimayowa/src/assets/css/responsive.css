@@ -137,12 +137,12 @@
 		height: auto;
 	}
 	.mayor-hero-name {
-		font-size: 2rem;
+		font-size: 1.8rem;
 		text-align: center;
 		margin-bottom: 0;
 	}
 	.mayor-hero-title {
-		font-size: 1.5rem;
+		font-size: 1.3rem;
 		text-align: center;
 	}
 	.mayor-hero-subtitle {
@@ -191,7 +191,7 @@
 		min-height: 68vh;
 	}
 	.arrow {
-		margin: auto 5px;
+		/* margin: auto 5px; */
 		transform: translateY(-350%);
 		background-color: var(--transparentLightBlue)
 	};
@@ -235,17 +235,31 @@
 	button {
 		font-size: var(--mparagraph) !important;
 	}
+	/* toast styling */
+	.Toastify__toast-container--top-center {
+        margin-top: 20px !important;
+        /* width: auto; */
+        /* white-space: pre; */
+    }
+    .custom_toast {
+        max-width: 95%;
+        min-width: 50%;
+        width: max-content;
+        font-size: 0.8rem;
+        margin: 0 auto;
+		background-color: var(--lightBlue) !important;
+    }
 }
 
 @media (max-width: 480px) {
 	.arrow {
-        transform: translateY(-370%);
+        transform: translateY(-350%);
     }
 }
 
 @media (max-width: 420px) {
 	.arrow {
-        transform: translateY(-390%);
+        transform: translateY(-340%);
     }
 }
 
@@ -258,9 +272,15 @@
     }
 }
 
+@media (max-width: 390px) {
+	.arrow {
+        transform: translateY(-320%);
+    }
+}
+
 @media (max-width: 380px) {
 	.arrow {
-        transform: translateY(-350%);
+        transform: translateY(-300%);
     }
 	.mayor-section-title {
         font-size: 1.6rem;

@@ -28,49 +28,41 @@ function Projects() {
 	return (
 		<>
 			<div className={`container mayor-container-projects`}>
-				{/* {pageLoading?
-				<>
-					<Spinner type="dot" />
-				</>
-				:
-				<> */}
-					<div className="row">
-						<div className="text-center col-12">
-							<h2 className="mayor-text-primary mayor-section-title animate slide-from-top">My Projects</h2>
-							<p className="mx-auto mayor-section-desc mb-0 animate slide-from-bottom">
-								Praesent sed pharetra lorem, blandit convallis mi. Aenean ornare elit ac metus lacinia, sed iaculis nibh semper. Pellentesque est urna, lobortis eu arcu a, aliquet tristique urna.
-							</p>
-							<p className='mb-1 animate slide-from-left'>Page: {page + 1}</p>
-						</div>
+				<div className="row">
+					<div className="text-center col-12">
+						<h2 className="mayor-text-primary mayor-section-title animate slide-from-top">My Projects</h2>
+						<p className="mx-auto mayor-section-desc mb-0 animate slide-from-bottom">
+							Praesent sed pharetra lorem, blandit convallis mi. Aenean ornare elit ac metus lacinia, sed iaculis nibh semper. Pellentesque est urna, lobortis eu arcu a, aliquet tristique urna.
+						</p>
+						<p className='mb-1 animate slide-from-left'>Page: {page + 1}</p>
 					</div>
-					<div className="row">
-						<div className="col-12">
-							<div className="project-cards">
-								<div className="grid mayor-projects">
-									{currentItems.map((project, pIdx) => {
-										return (
-											<Link key={`${page}-${pIdx}`}
-											className=''
-											// to=""
+				</div>
+				<div className="row">
+					<div className="col-12">
+						<div className="project-cards">
+							<div className="grid mayor-projects">
+								{currentItems.map((project, pIdx) => {
+									return (
+										<Link key={`${page}-${pIdx}`}
+										className=''
+										// to=""
+										>
+											<figure className={`effect-honey mayor-projects-item swap-animate swap-slide-right`}
+											style={{
+												animationDelay: `${pIdx * 0.25}s`,
+											}}
 											>
-												<figure className={`effect-honey mayor-projects-item swap-animate swap-slide-right`}
-												style={{
-													animationDelay: `${pIdx * 0.25}s`,
-												}}
-												>
-													<img src={project.image}
-														alt="Image-photo 1"
-														className="img-fluid" />
-													<figcaption>
-														<h2><i>{project.i}<br/><span>{project.span}</span></i></h2>
-													</figcaption>
-												</figure>
-											</Link>
-										)
-									})}
-								</div>
-							</div>
-							<div className="project-nav-btns">
+												<img src={project.image}
+													alt="Image-photo 1"
+													className="img-fluid" />
+												<figcaption>
+													<h2><i>{project.i}<br/><span>{project.span}</span></i></h2>
+												</figcaption>
+											</figure>
+										</Link>
+									)
+								})}
+								<div className="project-nav-btns">
 									<button
 									className={`arrow left ${firstPage?'d-none':''}`}
 									onClick={prevPage}
@@ -86,10 +78,10 @@ function Projects() {
 										<FontAwesomeIcon icon="chevron-right" size='3x' />
 									</button>
 								</div>
+							</div>
 						</div>
 					</div>
-				{/* </>
-				} */}
+				</div>
 			</div>
 		</>
 	)

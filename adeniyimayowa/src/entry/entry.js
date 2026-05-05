@@ -1,6 +1,12 @@
 const images = require.context('../assets/img', false, /\.(png|jpe?g|svg)$/);
 const getImage = (name) => (images(`./${name}`))
 
+// name
+const name = "Emmanuel M. Adeniyi"
+
+// professional title
+const professionalTitle = "Business Intelligence Analyst"
+
 // email
 const email = "Mayor4lyfe@gmail.com"
 
@@ -225,4 +231,6 @@ export {
 	email,
 	phoneNumber,
 	stack,
+	name,
+	professionalTitle,
 }
