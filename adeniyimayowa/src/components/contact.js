@@ -84,7 +84,8 @@ function Contact() {
 		const config = {
 			apiKey: apiKey, // 'brevo-api-key',
 			apiEmail: apiEmail, // brevo email address
-			ownerEmail: 'ogagadafetite@gmail.com', // name, // your-email',
+			// ownerEmail: 'ogagadafetite@gmail.com', // your-email',
+			ownerEmail: name, // your-email',
 			senderName: name, // 'Your Website Name'
 		};
 

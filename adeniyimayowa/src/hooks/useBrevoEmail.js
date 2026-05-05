@@ -45,9 +45,6 @@ const emailContentTemplate = ({ formData, type = 'owner', senderName }) => {
 			<a href="https://www.linkedin.com/in/aden-emmanuel-117440142/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bb%2Fo04HcXRzabnbDCzJvVyQ%3D%3D" target="_blank" rel="noopener noreferrer" style="${socialLinkStyle}">
 				<img src="https://raw.githubusercontent.com/DafetiteOgaga/dafetite_logo/refs/heads/main/linkedin.png" alt="LinkedIn" style="${socialIconStyle}" />
 			</a>
-			<a href="https://wa.link/67x975" target="_blank" rel="noopener noreferrer" style="${socialLinkStyle}">
-				<img src="https://raw.githubusercontent.com/DafetiteOgaga/dafetite_logo/refs/heads/main/whatsapp.png" alt="Whatsapp" style="${socialIconStyle}" />
-			</a>
 		</div>
 	`;
 
