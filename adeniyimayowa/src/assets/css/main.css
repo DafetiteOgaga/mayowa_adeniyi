@@ -564,6 +564,21 @@ figure.effect-honey:hover h2 i {
   transform: translate3d(0, 0, 0);
 }
 
+.click-to-inspect {
+  display: block;
+  padding-top: 10px;
+  font-style: italic;
+  font-weight: normal !important;
+  font-size: 0.8em;
+  text-transform: none;
+}
+
+.project-card-body {
+  font-weight: normal !important;
+  font-size: 0.95em;
+  text-transform: none;
+}
+
 /* Contact */
 
 section.contact-me {

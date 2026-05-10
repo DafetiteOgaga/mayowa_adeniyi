@@ -117,108 +117,172 @@ const professionalSummary = `
 const projects = [
 	{
 		image: getImage("gallery-tn-01.jpg"),
-		i: "Physical Health",
-		span: "Exercise!",
+		title: "Exercise!",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-02.jpg"),
-		i: "Rain on Glass",
-		span: "Second Image",
+		title: "Second Image",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-03.jpg"),
-		i: "Mega City",
-		span: "Sea View",
+		title: "Sea View",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-04.jpg"),
-		i: "Dream Girl",
-		span: "Thoughts",
+		title: "Thoughts",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-05.jpg"),
-		i: "Offices",
-		span: "Workstation",
+		title: "Workstation",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-06.jpg"),
-		i: "Just Above",
-		span: "The City",
+		title: "The City",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-01.jpg"),
-		i: "Another",
-		span: "Exercise Time",
+		title: "Exercise Time",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-02.jpg"),
-		i: "Repeated",
-		span: "Image Spot",
+		title: "Image Spot",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-03.jpg"),
-		i: "Another",
-		span: "Exercise Time",
+		title: "Exercise Time",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-04.jpg"),
-		i: "Repeated",
-		span: "Image Spot",
+		title: "Image Spot",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-05.jpg"),
-		i: "Offices",
-		span: "Workstation",
+		title: "Workstation",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-06.jpg"),
-		i: "Just Above",
-		span: "The City",
+		title: "The City",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-01.jpg"),
-		i: "Another",
-		span: "Exercise Time",
+		title: "Exercise Time",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-02.jpg"),
-		i: "Repeated",
-		span: "Image Spot",
+		title: "Image Spot",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-03.jpg"),
-		i: "Another",
-		span: "Exercise Time",
+		title: "Exercise Time",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-04.jpg"),
-		i: "Repeated",
-		span: "Image Spot",
+		title: "Image Spot",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-05.jpg"),
-		i: "Offices",
-		span: "Workstation",
+		title: "Workstation",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-06.jpg"),
-		i: "Just Above",
-		span: "The City",
+		title: "The City",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-01.jpg"),
-		i: "Repeated",
-		span: "Image Spot",
+		title: "Image Spot",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-02.jpg"),
-		i: "Offices",
-		span: "Workstation",
+		title: "Workstation",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
 		image: getImage("gallery-tn-03.jpg"),
-		i: "Just Above",
-		span: "The City",
+		title: "The City",
+		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 ];
 export {
