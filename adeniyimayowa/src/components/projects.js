@@ -33,7 +33,7 @@ function Projects() {
 					<div className="text-center col-12">
 						<h2 className="mayor-text-primary mayor-section-title animate slide-from-top">My Projects</h2>
 						<p className="mx-auto mayor-section-desc mb-0 animate slide-from-bottom">
-							Praesent sed pharetra lorem, blandit convallis mi. Aenean ornare elit ac metus lacinia, sed iaculis nibh semper. Pellentesque est urna, lobortis eu arcu a, aliquet tristique urna.
+							These projects focuses on transforming ideas and data into intuitive, efficient, and impactful digital solutions.
 						</p>
 						<p className='mb-1 animate slide-from-left'>Page: {page + 1}</p>
 					</div>
