@@ -84,6 +84,9 @@
 }
 
 @media (max-width: 768px) {
+	section.contact-me {
+		background-position: top;
+	}
 	nav {
 		padding-top: 25px !important;
 	}
