@@ -26,6 +26,8 @@ function Projects() {
 	};
 	const firstPage = page === 0
 	const lastPage = (page + 1) * ITEMS_PER_PAGE >= projects.length
+	const showPageNum = projects.length > ITEMS_PER_PAGE
+	// console.log({showPageNum})
 	return (
 		<>
 			<div className={`container mayor-container-projects`}>
@@ -35,7 +37,7 @@ function Projects() {
 						<p className="mx-auto mayor-section-desc mb-0 animate slide-from-bottom">
 							These projects focuses on transforming ideas and data into intuitive, efficient, and impactful digital solutions.
 						</p>
-						<p className='mb-1 animate slide-from-left'>Page: {page + 1}</p>
+						<p className={`mb-1 animate slide-from-left ${showPageNum?'':'d-none'}`}>Page: {page + 1}</p>
 					</div>
 				</div>
 				<div className="row">
