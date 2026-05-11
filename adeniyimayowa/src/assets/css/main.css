@@ -136,7 +136,10 @@ section {
 }
 
 section.projects {
-  /* flex: 1; */
+  background-image: url(../img/project_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
   padding-top: 80px;
 }
 .spinner-loading {
@@ -297,9 +300,10 @@ section.projects {
 /* home */
 
 section.home {
-  background-image: url(../img/background1.jpg);
+  background-image: url(../img/home_bg.jpg);
   background-repeat: no-repeat;
   background-position: left;
+  background-size: cover;
   color: var(--white);
 }
 
@@ -585,10 +589,10 @@ figure.effect-honey:hover h2 i {
 
 section.contact-me {
   color: var(--white);
-  background-image: url(../img/background2.jpg);
-  background-position: right;
+  background-image: url(../img/contact_bg.jpg);
+  /* background-position: right; */
   background-repeat: no-repeat;
-  /* flex: 1; */
+  background-size: cover;
   padding-top: 80px;
   padding-bottom: 0;
 }
