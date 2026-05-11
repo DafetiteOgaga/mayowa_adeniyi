@@ -1,41 +1,72 @@
-const images = require.context('../assets/img', false, /\.(png|jpe?g|svg)$/);
+const images = require.context('./images', false, /\.(png|jpe?g|svg)$/);
 const getImage = (name) => (images(`./${name}`))
 
-// name
+// name (the names are displayed as is)
 const name = "Emmanuel M. Adeniyi"
 
-// professional title
+// professional title (the professional title is displayed as is)
 const professionalTitle = "Business Intelligence Analyst"
 
-// email
+// email (the email is used as is and should not be edited/changed into an invalid email for the contact in form page to work)
 const email = "Mayor4lyfe@gmail.com"
 
-// phone number
+// phone number (the phone number is used as is and should not be edited/changed into an invalid format for the link in the header to work)
 const phoneNumber = "+2348082887079"
 
-// profile picture
+// profile picture (change this image name (e.g mayor.jpg) to the name of the profile image saved in images folder)
 const profilePicture = getImage("mayor.jpg")
 
 // your experiences
+// .................................................
+// to edit: simply make corrections to the texts
+// .................................................
+// to add another experience: add another block i.e:
+	// {
+    //     title: "Data Analyst",
+    //     company: "Lagos State Data community",
+    // },
+// and edit it to your taste
+// .................................................
+// to remove an experience: simply remove the block e.g:
+	// {
+    //     title: "Data Analyst",
+    //     company: "Lagos State Data community",
+    // },
+// .................................................
 const experiences = [
     {
         title: "Senior Business Intelligence Analyst",
         company: "Federated Co-operatives Limited - Regina, SK ",
-        // duties: "Praesent sed pharetra lorem, blandit convallis mi. Aenean ornare elit ac metus lacinia, sed iaculis nibh semper. Pellentesque est urna."
     },
     {
         title: "Product Data Analyst",
         company: "Maven Analytics - Florida, U.S.A",
-        // duties: "Praesent sed pharetra lorem, blandit convallis mi. Aenean ornare elit ac metus lacinia, sed iaculis nibh semper. Pellentesque est urna."
     },
 	{
         title: "Data Analyst",
         company: "Lagos State Data community",
-        // duties: "Praesent sed pharetra lorem, blandit convallis mi. Aenean ornare elit ac metus lacinia, sed iaculis nibh semper. Pellentesque est urna."
     },
 ]
 
 // your education achievements
+// .................................................
+// to edit: simply make corrections to the texts
+// .................................................
+// to add another educaion: add another block i.e:
+	// {
+	// 	course: "Pharmaceutical Chemistry",
+	// 	degree: "Masters of Science (Msc)",
+	// 	school: "University of Ibadan (UI)."
+	// },
+// and edit it to your taste
+// .................................................
+// to remove an education: simply remove the block e.g:
+	// {
+	// 	course: "Pharmaceutical Chemistry",
+	// 	degree: "Masters of Science (Msc)",
+	// 	school: "University of Ibadan (UI)."
+	// },
+// .................................................
 const education = [
     {
         course: "Pharmaceutical Chemistry",
@@ -55,6 +86,26 @@ const education = [
 ]
 
 // your certifications
+// .................................................
+// to edit: simply make corrections to the texts
+// .................................................
+// to add another certification: add another block i.e:
+	// {
+	// 	title: "Data Analytics",
+	// 	cerification: "Google Data Analytics (specialization)",
+	// 	institution: "Cousera (Google)",
+	// 	link: "https://coursera.org/share/a7d57a1546494c9ed0e251b97cdafa81",
+	// },
+// and edit it to your taste
+// .................................................
+// to remove a certification: simply remove the block e.g:
+	// {
+	// 	title: "Data Analytics",
+	// 	cerification: "Google Data Analytics (specialization)",
+	// 	institution: "Cousera (Google)",
+	// 	link: "https://coursera.org/share/a7d57a1546494c9ed0e251b97cdafa81",
+	// },
+// .................................................
 const certifications = [
     {
         title: "Data Analytics",
@@ -88,11 +139,22 @@ const certifications = [
     },
 ]
 
+// stack
+// .................................................
+// to edit: simply make corrections to the texts
+// .................................................
+// to add: simply add the stack to the list (note that they are and must be in quotes and separated by commas). the order of the list matters
+// .................................................
+// to remove: simply remove the stack from the list (along with its quotes and comma)
+// .................................................
 const stack = [
 	"SQL", "Tableau", "Python", "R", "Power BI", "Excel",
 ]
 
 // professional summary (watch out for the opening and closing backticks)
+// .................................................
+// to edit: simply make corrections to the texts
+// .................................................
 const professionalSummary = `
 				I am a Business Intelligence Analyst with a strong passion
 				for transforming complex, ambiguous data into clear and
@@ -114,9 +176,37 @@ const professionalSummary = `
 
 
 //  projects
+// .................................................
+// to edit: simply make corrections to the texts
+// .................................................
+// to add another project: add another block i.e:
+	// {
+	// 	image: getImage("mayor.jpg"),
+	// 	title: "Exercise!",
+	// 	body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+	// 			Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+	// 			Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+	// 			leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+	// 	link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
+	// },
+	// and edit it to your taste
+// .................................................
+// to remove a project: simply remove the block e.g:
+	// {
+	// 	image: getImage("mayor.jpg"),
+	// 	title: "Exercise!",
+	// 	body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
+	// 			Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+	// 			Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
+	// 			leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
+	// 	link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
+	// },
+// .................................................
+// note that the link for each must be to the spcific project (on tableau or anywhere it is hosted) referenced
+// also note that: the name of the project image that must be replaced (if applicable) needs to be the exact name of the image saved in the image folder and ths name must be in a quote e.g "mayor.jpg", "mayor2.jpg"
 const projects = [
 	{
-		image: getImage("gallery-tn-01.jpg"),
+		image: getImage("mayor.jpg"),
 		title: "Exercise!",
 		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
 				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
@@ -125,166 +215,17 @@ const projects = [
 		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
 	{
-		image: getImage("gallery-tn-02.jpg"),
+		image: getImage("mayor2.jpg"),
 		title: "Second Image",
 		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
 				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
 				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
 		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
 	},
-	{
-		image: getImage("gallery-tn-03.jpg"),
-		title: "Sea View",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-04.jpg"),
-		title: "Thoughts",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-05.jpg"),
-		title: "Workstation",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-06.jpg"),
-		title: "The City",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-01.jpg"),
-		title: "Exercise Time",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-02.jpg"),
-		title: "Image Spot",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-03.jpg"),
-		title: "Exercise Time",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-04.jpg"),
-		title: "Image Spot",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-05.jpg"),
-		title: "Workstation",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-06.jpg"),
-		title: "The City",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-01.jpg"),
-		title: "Exercise Time",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-02.jpg"),
-		title: "Image Spot",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-03.jpg"),
-		title: "Exercise Time",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-04.jpg"),
-		title: "Image Spot",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-05.jpg"),
-		title: "Workstation",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-06.jpg"),
-		title: "The City",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-01.jpg"),
-		title: "Image Spot",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-02.jpg"),
-		title: "Workstation",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
-	{
-		image: getImage("gallery-tn-03.jpg"),
-		title: "The City",
-		body: `Proin enim orci, tincidunt quis suscipit in, placerat nec est.
-				Vestibulum posuere faucibus posuere. Quisque aliquam velit eget
-				leo blandit egestas. Nulla id posuere felis, quis tristique nulla.`,
-		link: "https://public.tableau.com/app/profile/adeniyi.emmanuel7932/vizzes"
-	},
 ];
+
+
+// do not touch this section.
 export {
 	experiences,
 	education,
