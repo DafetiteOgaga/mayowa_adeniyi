@@ -249,6 +249,10 @@
         margin: 0 auto;
 		background-color: var(--lightBlue) !important;
     }
+	figure.effect-honey {
+		max-height: 258px;
+		height: 258px;
+	}
 }
 
 @media (max-width: 480px) {
@@ -274,14 +278,20 @@
 
 @media (max-width: 390px) {
 	.arrow {
-        transform: translateY(-360%);
+        transform: translateY(-355%);
     }
+	figure.effect-honey h2 {
+		padding: 0.5rem;
+	}
 }
 
 @media (max-width: 380px) {
-	.arrow {
+	/* .arrow {
         transform: translateY(-375%);
-    }
+    } */
+	figure.effect-honey h2 {
+		padding: 0.35rem;
+	}
 	.mayor-section-title {
         font-size: 1.6rem;
     }

@@ -128,7 +128,7 @@ function Contact() {
 					<div className="text-center col-12">
 						<h2 className="mayor-section-title mb-4 animate slide-from-bottom">Contact Me</h2>
 						<p className="mb-5 animate slide-from-top">
-						Proin enim orci, tincidunt quis suscipit in, placerat nec est. Vestibulum posuere faucibus posuere. Quisque aliquam velit eget leo blandit egestas. Nulla id posuere felis, quis tristique nulla.
+							Whether you have a question, collaboration idea, or just want to say hello, feel free to get in touch anytime.
 						</p>
 					</div>
 					<div className="col-sm-12 col-md-6">

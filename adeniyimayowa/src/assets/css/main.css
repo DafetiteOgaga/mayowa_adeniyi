@@ -506,6 +506,8 @@ figure.effect-honey {
   background: var(--background);
   max-width: 220px;
   border-radius: 20px 20px 0 0;
+  max-height: 330px;
+  height: 330px;
 }
 
 figure.effect-honey img {
