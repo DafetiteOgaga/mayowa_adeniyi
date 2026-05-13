@@ -88,10 +88,10 @@ function AboutMe() {
                                         style={{
                                             animationDelay: `${eIdx * 0.8}s`,
                                         }}>
-                                            <h5 className="mb-0 swap-animate swap-slide-bottom"
+                                            {/* <h5 className="mb-0 swap-animate swap-slide-bottom"
                                             style={{
                                                 animationDelay: `${eIdx * 0.8 * 1}s`,
-                                            }}>{edu.course}</h5>
+                                            }}>{edu.course}</h5> */}
                                             <h6 className="mb-0 italic swap-animate swap-slide-bottom"
                                             style={{
                                                 animationDelay: `${eIdx * 0.8 * 1.3}s`,
